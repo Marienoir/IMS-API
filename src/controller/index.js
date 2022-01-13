@@ -1,7 +1,6 @@
 import dotenv from 'dotenv';
 import * as services from '../services/index';
-import utils from '../utils/index';
-// import checkIfUserIsAdmin from '../validation/index.js';
+import validatePassword from '../utils/index';
 
 dotenv.config();
 
@@ -23,8 +22,8 @@ export const logUser = async (req, res, next) => {
   try {
     const { email, password } = req.body;
     await services.getUser(email);
-    // const a = await checkIfUserIsAdmin();
-    const token = await utils.validatePassword(email, password);
+
+    const token = await validatePassword(email, password);
     if (!token) {
       res.status(401).json({
         status: 'fail',
@@ -34,29 +33,6 @@ export const logUser = async (req, res, next) => {
       res.status(200).json({
         status: 'success',
         message: 'User is authenticated ',
-        token,
-      });
-    }
-  } catch (error) {
-    next(error);
-  }
-};
-
-export const checka = async (req, res, next) => {
-  try {
-    const { email, password } = req.body;
-    await services.getUser(email);
-    // const a = await checkIfUserIsAdmin();
-    const token = await utils.validatePassword(email, password);
-    if (!token) {
-      res.status(401).json({
-        status: 'fail',
-        message: 'Invalid credentials',
-      });
-    } else {
-      res.status(200).json({
-        status: 'success',
-        message: 'User is admin ',
         token,
       });
     }

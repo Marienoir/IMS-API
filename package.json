@@ -26,7 +26,8 @@
     "jsonwebtoken": "^8.5.1",
     "nodemon": "^2.0.14",
     "pg-promise": "^10.11.1",
-    "supertest": "^6.2.0"
+    "supertest": "^6.2.0",
+    "winston": "^3.4.0"
   },
   "devDependencies": {
     "@babel/core": "^7.16.7",
