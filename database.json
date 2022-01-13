@@ -1,0 +1,15 @@
+{
+    "development": {
+      "ENV": "IMS_API_DATABASE_DEV_URL"
+    },
+    "test": {
+      "ENV": "IMS_API_DATABASE_TEST_URL"
+    },
+    "production": {  
+      "ENV": "IMS_API_DATABASE_PROD_URL"
+    },
+    "defaultEnv": {
+      "ENV": "IMS_API_NODE_ENV"
+    },
+    "sql-file": true
+  }

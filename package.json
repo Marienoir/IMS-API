@@ -1,0 +1,39 @@
+{
+  "name": "ims-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "--exec babel-node src/index.js",
+    "dev": "nodemon --exec babel-node src/index.js",
+    "test": "mocha test --exit --timeout=150000"
+  },
+  "keywords": [],
+  "author": "Mary",
+  "license": "ISC",
+  "dependencies": {
+    "app-root-path": "^3.0.0",
+    "bcryptjs": "^2.4.3",
+    "bluebird": "^3.7.2",
+    "chai": "^4.3.4",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "db-migrate": "^0.11.13",
+    "db-migrate-pg": "^1.2.2",
+    "dotenv": "^11.0.0",
+    "esm": "^3.2.25",
+    "express": "^4.17.2",
+    "jsonwebtoken": "^8.5.1",
+    "nodemon": "^2.0.14",
+    "pg-promise": "^10.11.1",
+    "supertest": "^6.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.7",
+    "@babel/node": "^7.16.8",
+    "@babel/preset-env": "^7.16.8",
+    "eslint": "^8.6.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.4"
+  }
+}
