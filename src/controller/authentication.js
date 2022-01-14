@@ -1,8 +1,5 @@
-import dotenv from 'dotenv';
 import * as services from '../services/userServices';
 import { validatePassword } from '../utils/index';
-
-dotenv.config();
 
 export const createNewUser = async (req, res, next) => {
   try {
