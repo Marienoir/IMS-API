@@ -2,7 +2,8 @@
 /* eslint-disable no-console */
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
-import * as services from '../services/index';
+import * as services from '../services/userServices';
+import env from '../config/env';
 
 export const hashPassword = async (password) => {
   const encryptedPassword = await bcrypt.hash(password, 10);
@@ -19,12 +20,11 @@ export const generateToken = (user) => {
       role: user.role,
       status: user.status,
     },
-    process.env.IMS_API_TOKEN_KEY,
+    env.IMS_API_TOKEN_KEY,
     {
       expiresIn: '2hr',
     },
   );
-  console.log(user);
   return token;
 };
 
@@ -34,10 +34,11 @@ export const comparePassword = async (password, userPassword) => {
 };
 
 export const validatePassword = async (email, password) => {
-  const user = await services.getUser(email);
+  const user = await services.getUserByEmail(email);
 
   if (user.length === 1) {
     const isValid = await comparePassword(password, user[0].password);
+
     if (isValid) {
       const token = await generateToken({
         id: user[0].id,

@@ -4,7 +4,7 @@ import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import db from './config/db';
-import route from './router/index';
+import route from './router/user';
 import env from './config/env';
 
 dotenv.config();
