@@ -32,3 +32,5 @@ export const updateUserById = async (id, body) => {
   return db.one(userQueries.updateUserById, [body.first_name, body.last_name, body.email, body.image_url, body.phone_number,
     body.gender, encryptedPassword, body.role, body.deleted, body.status, id]);
 };
+
+export const getUserByFirstName = (first_name) => db.any(userQueries.searchUserByFirstName, first_name);

@@ -1,7 +1,7 @@
 /* eslint-disable camelcase */
 import dotenv from 'dotenv';
 import {
-  deleteUserById, getAllUsers, getUserById, updateUserById,
+  deleteUserById, getAllUsers, getUserByFirstName, getUserById, updateUserById,
 } from '../services/userServices';
 
 dotenv.config();
@@ -65,6 +65,20 @@ export const updateAUserById = async (req, res, next) => {
       code: 200,
       message: 'User Updated successfully',
       data: newUser,
+    });
+  } catch (error) {
+    return next(error);
+  }
+};
+
+export const searchUserByName = async (req, res, next) => {
+  try {
+    const user = await getUserByFirstName(req.query.name);
+
+    return res.status(200).json({
+      code: 200,
+      message: 'User Gotten successfully',
+      user,
     });
   } catch (error) {
     return next(error);
