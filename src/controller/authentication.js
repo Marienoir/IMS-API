@@ -15,7 +15,7 @@ export const createNewUser = async (req, res, next) => {
   }
 };
 
-export const logUser = async (req, res, next) => {
+export const login = async (req, res, next) => {
   try {
     const { email, password } = req.body;
     await services.getUserByEmail(email);

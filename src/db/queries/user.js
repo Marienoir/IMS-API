@@ -57,8 +57,18 @@ const userQueries = {
         RETURNING *
   `,
   searchUserByFirstName: `
-        SELECT * FROM users
-        WHERE first_name=$1
+        SELECT
+        id,
+        first_name,
+        last_name,
+        email,
+        image_url,
+        phone_number,
+        gender,
+        role,
+        status
+        FROM users
+        WHERE to_tsvector(first_name||' ' || last_name) @@to_tsquery($1) AND deleted = 'false'
   `,
 };
 

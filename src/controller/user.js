@@ -1,18 +1,32 @@
 /* eslint-disable camelcase */
 import dotenv from 'dotenv';
+import cron from 'cron';
 import {
   deleteUserById, getAllUsers, getUserByFirstName, getUserById, updateUserById,
 } from '../services/userServices';
 
 dotenv.config();
 
+// ...
+
 export const getUsers = async (req, res, next) => {
   try {
-    const users = await getAllUsers();
+    const { name } = req.query;
+    const users = await getAllUsers(name);
+
+    const { page } = req.query;
+    const { limit } = req.query;
+    const startIndex = (page - 1) * limit;
+    const endIndex = page * limit;
+    const result = users.slice(startIndex, endIndex);
+
+    cron.schedule('* * * * *', () => {
+      console.log('this task is going to keep running');
+    });
     return res.status(200).json({
       code: 200,
       message: 'All Users Gotten successfully',
-      users,
+      result,
     });
   } catch (error) {
     return next(error);
@@ -74,7 +88,7 @@ export const updateAUserById = async (req, res, next) => {
 export const searchUserByName = async (req, res, next) => {
   try {
     const user = await getUserByFirstName(req.query.name);
-
+    console.log(user);
     return res.status(200).json({
       code: 200,
       message: 'User Gotten successfully',

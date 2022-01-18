@@ -1,17 +1,16 @@
-import { getProductByName } from '../services/stockServices';
+import { getProductByItem } from '../services/purchaseServices';
+import { createStock, getProductByName } from '../services/stockServices';
 
-const checkIfProductExists = async (req, res, next) => {
+export const checkProductAndCreateStock = async (req, res, next) => {
   try {
-    const { item } = req.body;
-    const lowerProduct = item.toLowerCase();
+    const { body } = req;
+    const lowerProduct = body.item.toLowerCase();
 
     const [product] = await getProductByName(lowerProduct);
     if (product) {
-      return res.status(403).json({
-        status: 'Failed',
-        message: 'Item Already Exists',
-      });
+      return next();
     }
+    await createStock(body);
 
     req.item = product;
     return next();
@@ -20,4 +19,18 @@ const checkIfProductExists = async (req, res, next) => {
   }
 };
 
-export default checkIfProductExists;
+export const checkApprovalStatus = async (req, res, next) => {
+  try {
+    const product = await getProductByItem(req.params.name);
+
+    if (product[0].approval_status === 'Approved') {
+      return res.status(400).json({
+        status: 'fail',
+        message: 'Item already approved',
+      });
+    }
+    return next();
+  } catch (error) {
+    return next(error);
+  }
+};

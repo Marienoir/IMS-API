@@ -26,7 +26,6 @@ export const createPurchaseSchema = {
     item: Joi.string().required(),
     quantity: Joi.number().required(),
     price: Joi.number().required(),
-    approval_status: Joi.string().required(),
     delivery_time: Joi.string().required(),
   }),
   message: 'Error creating product',

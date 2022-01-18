@@ -12,6 +12,9 @@ const stockQueries = {
             SELECT * FROM stock
             WHERE item=$1 
           `,
+  getAllStocks: `
+          SELECT * FROM stock
+          `,
 };
 
 export default stockQueries;

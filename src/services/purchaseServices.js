@@ -6,11 +6,13 @@
 import db from '../config/db';
 import purchaseQueries from '../db/queries/purchase-order';
 
-const createPurchaseOrder = async (body) => {
+export const createPurchaseOrder = async (body) => {
   const payload = [
     body.item, body.quantity, body.price, body.approval_status, body.delivery_time,
   ];
   return db.one(purchaseQueries.createPurchaseOrder, payload);
 };
 
-export default createPurchaseOrder;
+export const getProductByItem = async (item) => db.any(purchaseQueries.getProductByName, [item]);
+
+export const updateStatusByProduct = async (item) => db.any(purchaseQueries.approveProductByName, [item]);
