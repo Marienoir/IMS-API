@@ -1,5 +1,6 @@
 /* eslint-disable camelcase */
 import dotenv from 'dotenv';
+import paginate from '../middleware/pagination';
 import {
   deleteUserById, getAllUsers, getUserByFirstName, getUserById, updateUserById,
 } from '../services/userServices';
@@ -9,8 +10,8 @@ dotenv.config();
 export const getUsers = async (req, res, next) => {
   try {
     const { name } = req.query;
-    const { offset } = req.query;
-    const { limit } = req.query;
+    const pagination = await paginate(req);
+    const { limit, offset } = pagination;
     const users = await getAllUsers(limit, offset, name);
 
     return res.status(200).json({

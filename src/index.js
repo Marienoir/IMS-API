@@ -3,7 +3,7 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import cron from 'node-cron';
+import cronJob from './services/cronJob';
 import db from './config/db';
 import route from './router';
 import env from './config/env';
@@ -55,9 +55,7 @@ db.connect()
   .then((obj) => {
     app.listen(port, () => {
       obj.done();
-      cron.schedule('* * * * *', () => {
-        console.log('running a task every minute');
-      });
+      cronJob();
       console.log(`Starting on port ${port}`);
     });
   })
