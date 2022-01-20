@@ -23,11 +23,10 @@ export const verifyToken = async (req, res, next) => {
     req.user = tokenValidated;
     return next();
   } catch (err) {
-    res.status(403).json({
+    return res.status(403).json({
       status: 'Failed',
       message: 'Unable to authenticate token.',
     });
-    return next(err);
   }
 };
 

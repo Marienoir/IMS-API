@@ -1,14 +1,19 @@
 /* eslint-disable camelcase */
 import dotenv from 'dotenv';
+import paginate from '../middleware/pagination';
 import {
-  deleteUserById, getAllUsers, getUserById, updateUserById,
+  deleteUserById, getAllUsers, getUserByFirstName, getUserById, updateUserById,
 } from '../services/userServices';
 
 dotenv.config();
 
 export const getUsers = async (req, res, next) => {
   try {
-    const users = await getAllUsers();
+    const { name } = req.query;
+    const pagination = await paginate(req);
+    const { limit, offset } = pagination;
+    const users = await getAllUsers(limit, offset, name);
+
     return res.status(200).json({
       code: 200,
       message: 'All Users Gotten successfully',
@@ -65,6 +70,20 @@ export const updateAUserById = async (req, res, next) => {
       code: 200,
       message: 'User Updated successfully',
       data: newUser,
+    });
+  } catch (error) {
+    return next(error);
+  }
+};
+
+export const searchUserByName = async (req, res, next) => {
+  try {
+    const user = await getUserByFirstName(req.query.name);
+    console.log(user);
+    return res.status(200).json({
+      code: 200,
+      message: 'User Gotten successfully',
+      user,
     });
   } catch (error) {
     return next(error);
