@@ -39,3 +39,5 @@ export const updateUserById = async (id, body) => {
 };
 
 export const getUserByFirstName = (first_name) => db.any(userQueries.searchUserByFirstName, first_name);
+
+export const updateStatus = async (id, status) => db.any(userQueries.updateUserStatus, [id, status]);

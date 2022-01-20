@@ -1,13 +1,14 @@
+import paginate from '../middleware/pagination';
 import { getAllStocks, getProductByName } from '../services/stockServices';
 
 export const getAnItemByName = async (req, res, next) => {
   try {
     const item = await getProductByName(req.query.item);
 
-    if (item.length !== 0) {
+    if (item) {
       return res.status(200).json({
         code: 200,
-        message: `${req.query.item} Gotten successfully`,
+        message: `${req.query.item} fetched successfully`,
         data: item,
       });
     }
@@ -22,19 +23,15 @@ export const getAnItemByName = async (req, res, next) => {
 
 export const getTotalStocks = async (req, res, next) => {
   try {
-    const stocks = await getAllStocks();
+    const pagination = await paginate(req);
+    const { limit, offset } = pagination;
 
-    const { page } = req.query;
-    const { limit } = req.query;
-    const startIndex = (page - 1) * limit;
-    const endIndex = page * limit;
-    const result = stocks.slice(startIndex, endIndex);
-
+    const stocks = await getAllStocks(limit, offset);
     if (stocks.length !== 0) {
       return res.status(200).json({
         code: 200,
         message: 'All Stocks Gotten successfully',
-        result,
+        stocks,
       });
     }
     return res.status(404).json({

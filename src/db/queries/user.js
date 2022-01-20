@@ -73,6 +73,14 @@ const userQueries = {
         FROM users
         WHERE to_tsvector(first_name||' ' || last_name) @@to_tsquery($1) AND deleted = 'false'
   `,
+  updateUserStatus: `
+        UPDATE users
+        SET 
+            status='active',
+            updated_at=NOW()
+        WHERE status='inactive'
+        RETURNING *
+`,
 };
 
 export default userQueries;

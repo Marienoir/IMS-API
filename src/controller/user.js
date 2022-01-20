@@ -1,11 +1,9 @@
 /* eslint-disable camelcase */
-import dotenv from 'dotenv';
+import cronSchedule from '../services/cronSchedule';
 import paginate from '../middleware/pagination';
 import {
-  deleteUserById, getAllUsers, getUserByFirstName, getUserById, updateUserById,
+  deleteUserById, getAllUsers, getUserById, updateUserById,
 } from '../services/userServices';
-
-dotenv.config();
 
 export const getUsers = async (req, res, next) => {
   try {
@@ -76,16 +74,23 @@ export const updateAUserById = async (req, res, next) => {
   }
 };
 
-export const searchUserByName = async (req, res, next) => {
-  try {
-    const user = await getUserByFirstName(req.query.name);
-    console.log(user);
-    return res.status(200).json({
-      code: 200,
-      message: 'User Gotten successfully',
-      user,
-    });
-  } catch (error) {
-    return next(error);
-  }
-};
+// export const updateAUserStatus = async (req, res, next) => {
+//   try {
+//     const a = cronSchedule();
+//     console.log(a);
+//     const user = await getUserById(req.params.id);
+//     const { id } = user;
+//     const newUser = await updateUserById(
+//       id,
+//       req.body,
+//     );
+
+//     return res.status(200).json({
+//       code: 200,
+//       message: 'User Updated successfully',
+//       data: newUser,
+//     });
+//   } catch (error) {
+//     return next(error);
+//   }
+// };
