@@ -1,13 +1,10 @@
 /* eslint-disable camelcase */
 import dotenv from 'dotenv';
-// import cron from 'cron';
 import {
   deleteUserById, getAllUsers, getUserByFirstName, getUserById, updateUserById,
 } from '../services/userServices';
 
 dotenv.config();
-
-// ...
 
 export const getUsers = async (req, res, next) => {
   try {
