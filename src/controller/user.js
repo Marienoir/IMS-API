@@ -1,6 +1,6 @@
 /* eslint-disable camelcase */
 import dotenv from 'dotenv';
-import cron from 'cron';
+// import cron from 'cron';
 import {
   deleteUserById, getAllUsers, getUserByFirstName, getUserById, updateUserById,
 } from '../services/userServices';
@@ -12,21 +12,14 @@ dotenv.config();
 export const getUsers = async (req, res, next) => {
   try {
     const { name } = req.query;
-    const users = await getAllUsers(name);
-
-    const { page } = req.query;
+    const { offset } = req.query;
     const { limit } = req.query;
-    const startIndex = (page - 1) * limit;
-    const endIndex = page * limit;
-    const result = users.slice(startIndex, endIndex);
+    const users = await getAllUsers(limit, offset, name);
 
-    cron.schedule('* * * * *', () => {
-      console.log('this task is going to keep running');
-    });
     return res.status(200).json({
       code: 200,
       message: 'All Users Gotten successfully',
-      result,
+      users,
     });
   } catch (error) {
     return next(error);

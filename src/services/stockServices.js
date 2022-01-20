@@ -16,3 +16,5 @@ export const createStock = async (body) => {
 export const getProductByName = (item, approval_status) => db.any(stockQueries.getItemByName, [item, approval_status]);
 
 export const getAllStocks = () => db.any(stockQueries.getAllStocks);
+
+export const updateStock = (id) => db.oneOrNone(stockQueries.updateStock, [id]);

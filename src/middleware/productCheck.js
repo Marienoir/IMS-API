@@ -1,4 +1,4 @@
-import { getProductByItem } from '../services/purchaseServices';
+import { getProductById } from '../services/purchaseServices';
 import { createStock, getProductByName } from '../services/stockServices';
 
 export const checkProductAndCreateStock = async (req, res, next) => {
@@ -21,12 +21,17 @@ export const checkProductAndCreateStock = async (req, res, next) => {
 
 export const checkApprovalStatus = async (req, res, next) => {
   try {
-    const product = await getProductByItem(req.params.name);
-
-    if (product[0].approval_status === 'Approved') {
+    const product = await getProductById(req.params.id);
+    if (!product) {
       return res.status(400).json({
         status: 'fail',
-        message: 'Item already approved',
+        message: 'Item not available',
+      });
+    }
+    if (product.approval_status === 'Approved' || product.approval_status === 'Disapproved') {
+      return res.status(400).json({
+        status: 'fail',
+        message: `Item already ${product.approval_status}`,
       });
     }
     return next();

@@ -9,15 +9,24 @@ const purchaseQueries = {
         ) VALUES(LOWER($1), $2, $3, 'Pending', $5)
         RETURNING *
         `,
-  getProductByName: `
+  getProductById: `
         SELECT * FROM purchase
-        WHERE item=$1 
+        WHERE id=$1 
       `,
-  approveProductByName: `
+  approveProductById: `
         UPDATE purchase
-        SET approval_status='Approved', updated_at=NOW()
-        WHERE item=$1
-   `,
+        SET 
+          approval_status='Approved', 
+          updated_at=NOW()
+        WHERE id=$1
+      `,
+  disapproveProductById: `
+        UPDATE purchase
+        SET 
+          approval_status='Disapproved', 
+          updated_at=NOW()
+        WHERE id=$1
+      `,
 };
 
 export default purchaseQueries;

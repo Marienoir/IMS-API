@@ -13,6 +13,8 @@ export const createPurchaseOrder = async (body) => {
   return db.one(purchaseQueries.createPurchaseOrder, payload);
 };
 
-export const getProductByItem = async (item) => db.any(purchaseQueries.getProductByName, [item]);
+export const getProductById = async (id) => db.oneOrNone(purchaseQueries.getProductById, [id]);
 
-export const updateStatusByProduct = async (item) => db.any(purchaseQueries.approveProductByName, [item]);
+export const updateStatusById = async (id) => db.oneOrNone(purchaseQueries.approveProductById, [id]);
+
+export const disapproveStatusById = async (id) => db.oneOrNone(purchaseQueries.disapproveProductById, [id]);

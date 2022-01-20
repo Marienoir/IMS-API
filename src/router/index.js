@@ -1,6 +1,6 @@
 import express from 'express';
 import { createNewUser, login } from '../controller/authentication';
-import { createPurchase, updateApprovalStatus } from '../controller/purchase';
+import { createPurchase, updateApprovalStatus, updateDisapprovalStatus } from '../controller/purchase';
 import { getAnItemByName, getTotalStocks } from '../controller/stock';
 import {
   getUsers, getAUserById, deleteAUserById, updateAUserById,
@@ -22,6 +22,7 @@ router.put('/api/v1/users/update/:id', verifyToken, checkIfUserIsAdmin, updateAU
 router.post('/api/v1/purchase/create', validateInput(createPurchaseSchema, 'body'), verifyToken, checkIfUserIsAdmin, checkProductAndCreateStock, createPurchase);
 router.get('/api/v1/stock', verifyToken, checkIfUserIsAdmin, getAnItemByName);
 router.get('/api/v1/stocks', verifyToken, checkIfUserIsAdmin, getTotalStocks);
-router.put('/api/v1/purchase/update/:name', verifyToken, checkIfUserIsAdmin, checkApprovalStatus, updateApprovalStatus);
+router.put('/api/v1/purchase/approve/:id', verifyToken, checkIfUserIsAdmin, checkApprovalStatus, updateApprovalStatus);
+router.put('/api/v1/purchase/disapprove/:id', verifyToken, checkIfUserIsAdmin, checkApprovalStatus, updateDisapprovalStatus);
 
 export default router;

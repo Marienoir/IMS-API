@@ -21,11 +21,11 @@ export const createUser = async (body) => {
 
 export const getUserByEmail = (email) => db.any(authQueries.getUserByEmail, email);
 
-export const getAllUsers = (search = '') => {
+export const getAllUsers = (limit, offset, search = '') => {
   if (search) {
     return db.any(userQueries.searchUserByFirstName, search);
   }
-  return db.any(userQueries.getAllUsers);
+  return db.any(userQueries.getAllUsers, [limit, offset]);
 };
 
 export const getUserById = async (id) => db.oneOrNone(userQueries.getUserById, [id]);
