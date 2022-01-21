@@ -15,6 +15,4 @@ export const createPurchaseOrder = async (body) => {
 
 export const getProductById = async (id) => db.oneOrNone(purchaseQueries.getProductById, [id]);
 
-export const updateStatusById = async (id) => db.oneOrNone(purchaseQueries.approveProductById, [id]);
-
-export const disapproveStatusById = async (id) => db.oneOrNone(purchaseQueries.disapproveProductById, [id]);
+export const updateStatusById = async (approval_status, id) => db.oneOrNone(purchaseQueries.updateProductStatusById, [approval_status, id]);

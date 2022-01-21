@@ -14,6 +14,7 @@ const stockQueries = {
           `,
   getAllStocks: `
           SELECT * FROM stock
+          ORDER BY id limit $1 offset $2
           `,
   updateStock: `
           UPDATE stock 

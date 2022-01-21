@@ -13,8 +13,8 @@ export const createStock = async (body) => {
   return db.one(stockQueries.createStocks, payload);
 };
 
-export const getProductByName = (item, approval_status) => db.any(stockQueries.getItemByName, [item, approval_status]);
+export const getProductByName = (item) => db.oneOrNone(stockQueries.getItemByName, [item]);
 
-export const getAllStocks = () => db.any(stockQueries.getAllStocks);
+export const getAllStocks = (limit, offset) => db.any(stockQueries.getAllStocks, [limit, offset]);
 
 export const updateStock = (id) => db.oneOrNone(stockQueries.updateStock, [id]);
