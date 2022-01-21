@@ -6,7 +6,7 @@ import dotenv from 'dotenv';
 import db from './config/db';
 import route from './router';
 import env from './config/env';
-import cronSchedule from './services/cronSchedule';
+import { activateCronSchedule, deactivateCronSchedule } from './services/cronSchedule';
 
 dotenv.config();
 
@@ -55,7 +55,8 @@ db.connect()
   .then((obj) => {
     app.listen(port, () => {
       obj.done();
-      cronSchedule();
+      activateCronSchedule();
+      deactivateCronSchedule();
       console.log(`Starting on port ${port}`);
     });
   })
