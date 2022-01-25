@@ -73,13 +73,29 @@ const userQueries = {
         FROM users
         WHERE to_tsvector(first_name||' ' || last_name) @@to_tsquery($1) AND deleted = 'false'
   `,
-  updateUserStatus: `
-        UPDATE users
+  alterUserSchedule: `
+        UPDATE users 
         SET 
-            status='active',
-            updated_at=NOW()
-        WHERE status='inactive'
-        RETURNING *
+            schedule = $1,
+            updated_at = NOW() 
+        WHERE id=$2
+        RETURNING id, first_name, last_name, email, status, schedule;
+    `,
+  deactivateUserStatus: `
+        UPDATE users 
+        SET 
+            status = 'inactive',
+            updated_at = NOW() 
+        WHERE schedule::date >= current_date
+        RETURNING id, first_name, last_name, email, status, schedule;
+    `,
+  activateUserStatus: `
+    UPDATE users 
+    SET 
+        status = 'active',
+        updated_at = NOW() 
+    WHERE schedule::date >= current_date
+    RETURNING id, first_name, last_name, email, status, schedule;
 `,
 };
 

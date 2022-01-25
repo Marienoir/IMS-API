@@ -22,7 +22,7 @@ export const generateToken = (user) => {
     },
     env.IMS_API_TOKEN_KEY,
     {
-      expiresIn: '1yr',
+      expiresIn: '1hr',
     },
   );
   return token;

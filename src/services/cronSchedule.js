@@ -1,12 +1,23 @@
+/* eslint-disable no-console */
+/* eslint-disable no-unused-vars */
 import cron from 'node-cron';
-import { updateStatus } from './userServices';
+import {
+  activateUserStatus,
+  deactivateUserStatus,
+} from './userServices';
 
-const cronSchedule = () => {
-  cron.schedule('59 59 23 * * *', () => {
-    const currentTime = new Date().toLocaleString();
-    updateStatus();
-    console.log(`All inactive users have been updated at ${currentTime}`);
+export const deactivateCronSchedule = () => {
+  cron.schedule('59 59 23 * * 5', async () => {
+    const inactiveuser = await deactivateUserStatus();
+    console.log(inactiveuser);
+    console.log('User has been deactivated');
   });
 };
 
-export default cronSchedule;
+export const activateCronSchedule = () => {
+  cron.schedule('59 59 23 * * 7', async () => {
+    const activeuser = await activateUserStatus();
+    console.log(activeuser);
+    console.log('User has been Activated');
+  });
+};
