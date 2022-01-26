@@ -1,9 +1,17 @@
+/* eslint-disable consistent-return */
+/* eslint-disable no-console */
 /* eslint-disable camelcase */
 // import cronSchedule from '../services/cronSchedule';
+import dayjs from 'dayjs';
+import dotenv from 'dotenv';
+import { client } from '../config/redis';
+
 import paginate from '../middleware/pagination';
 import {
   deleteUserById, getAllUsers, getUserById, updateUserById, updateUserSchedule,
 } from '../services/userServices';
+
+dotenv.config();
 
 export const getUsers = async (req, res, next) => {
   try {
@@ -11,6 +19,9 @@ export const getUsers = async (req, res, next) => {
     const pagination = await paginate(req);
     const { limit, offset } = pagination;
     const users = await getAllUsers(limit, offset, name);
+
+    const redisValue = JSON.stringify(users);
+    client.set('users', redisValue);
 
     return res.status(200).json({
       code: 200,
@@ -77,6 +88,12 @@ export const updateAUserById = async (req, res, next) => {
 export const updateSchedule = async (req, res, next) => {
   try {
     const { schedule } = req.body;
+    if (schedule && dayjs(schedule).isBefore(dayjs())) {
+      return res.status(400).json({
+        code: 400,
+        message: 'Schedule date must be higher than current date',
+      });
+    }
     const user = await getUserById(req.params.id);
     if (!user) {
       return res.status(200).json({

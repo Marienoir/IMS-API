@@ -19,7 +19,7 @@ export const createUser = async (body) => {
   return db.one(authQueries.addUser, payload);
 };
 
-export const getUserByEmail = (email) => db.any(authQueries.getUserByEmail, email);
+export const getUserByEmail = (email) => db.one(authQueries.getUserByEmail, email);
 
 export const getAllUsers = (limit, offset, search = '') => {
   if (search) {

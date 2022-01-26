@@ -1,4 +1,5 @@
 /* eslint-disable camelcase */
+import createActivityLogs from '../services/activityServices';
 import {
   createPurchaseOrder, getProductById, updateStatusById,
 } from '../services/purchaseServices';
@@ -8,7 +9,9 @@ export const createPurchase = async (req, res, next) => {
   try {
     const { body } = req;
     const data = await createPurchaseOrder(body);
-
+    // await createActivityLogs('Purchase ordered by me');
+    const a = await createActivityLogs(data.id, data.id, data.id, data.id, 'Purchase done by me');
+    console.log(a);
     return res.status(201).json({
       code: 201,
       message: 'Purchase Order created successfully',

@@ -34,6 +34,21 @@ const stockQueries = {
           WHERE 
               stock.item = purchase.item AND purchase.id = $1
         `,
+  updateStockQuantity: `
+      UPDATE stock 
+      SET 
+          quantity = stock.quantity - sales.quantity, 
+          updated_at = NOW()
+      FROM (
+          SELECT 
+            id,
+            quantity, 
+            price, 
+            item
+          FROM sales) AS sales
+      WHERE 
+          stock.item = sales.item AND sales.id = $1
+      `,
 };
 
 export default stockQueries;

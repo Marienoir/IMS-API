@@ -15,7 +15,7 @@ export const deactivateCronSchedule = () => {
 };
 
 export const activateCronSchedule = () => {
-  cron.schedule('59 59 23 * * 7', async () => {
+  cron.schedule('10 42 9 * * *', async () => {
     const activeuser = await activateUserStatus();
     console.log(activeuser);
     console.log('User has been Activated');

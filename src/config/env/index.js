@@ -5,6 +5,7 @@ import production from './production';
 
 const {
   IMS_API_PORT: PORT,
+  IMS_REDIS_PORT: REDIS_PORT,
   IMS_API_NODE_ENV: NODE_ENV,
 } = process.env;
 
@@ -19,5 +20,6 @@ export default {
   ...currentEnv,
   rootPath,
   PORT,
+  REDIS_PORT,
   NODE_ENV,
 };

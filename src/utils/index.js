@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 /* eslint-disable import/no-cycle */
 /* eslint-disable no-console */
 import bcrypt from 'bcryptjs';
@@ -11,9 +12,9 @@ export const hashPassword = async (password) => {
 };
 
 export const generateToken = (user) => {
-  const token = jwt.sign(
+  const access_token = jwt.sign(
     {
-      id: user.id,
+      user_id: user.id,
       email: user.email,
       first_name: user.first_name,
       last_name: user.last_name,
@@ -25,7 +26,24 @@ export const generateToken = (user) => {
       expiresIn: '1hr',
     },
   );
-  return token;
+
+  const refresh_token = jwt.sign(
+    {
+      user_id: user.id,
+      email: user.email,
+      first_name: user.first_name,
+      last_name: user.last_name,
+      role: user.role,
+      status: user.status,
+      type: process.env.IMS_API_REFRESH_KEY,
+    },
+    env.IMS_API_TOKEN_KEY,
+    {
+      expiresIn: '12hr',
+    },
+  );
+
+  return { access_token, refresh_token };
 };
 
 export const comparePassword = async (password, userPassword) => {
@@ -35,18 +53,16 @@ export const comparePassword = async (password, userPassword) => {
 
 export const validatePassword = async (email, password) => {
   const user = await services.getUserByEmail(email);
-
-  if (user.length === 1) {
-    const isValid = await comparePassword(password, user[0].password);
-
+  if (user) {
+    const isValid = await comparePassword(password, user.password);
     if (isValid) {
       const token = await generateToken({
-        id: user[0].id,
-        email: user[0].email,
-        first_name: user[0].first_name,
-        last_name: user[0].last_name,
-        role: user[0].role,
-        status: user[0].status,
+        user_id: user.id,
+        email: user.email,
+        first_name: user.first_name,
+        last_name: user.last_name,
+        role: user.role,
+        status: user.status,
       });
       return token;
     }
