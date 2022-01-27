@@ -1,9 +1,12 @@
+/* eslint-disable no-use-before-define */
+/* eslint-disable no-shadow */
 /* eslint-disable camelcase */
 /* eslint-disable no-unused-vars */
+import jwt from 'jsonwebtoken';
+import env from '../config/env';
 import * as services from '../services/userServices';
 import { client } from '../config/redis';
-import { validatePassword } from '../utils/index';
-import createActivityLogs from '../services/activityServices';
+import { generateToken, validatePassword } from '../utils/index';
 
 export const createNewUser = async (req, res, next) => {
   try {
@@ -28,8 +31,6 @@ export const login = async (req, res, next) => {
     const token = await validatePassword(email, password);
     const { access_token, refresh_token } = token;
 
-    client.set('refresh_token', refresh_token);
-
     if (!token) {
       res.status(401).json({
         status: 'fail',
@@ -37,6 +38,7 @@ export const login = async (req, res, next) => {
       });
     } else {
       res.status(200).json({
+        message: 'User is authenticated',
         access_token,
         refresh_token,
       });
@@ -48,18 +50,21 @@ export const login = async (req, res, next) => {
 
 export const refreshToken = async (req, res, next) => {
   try {
-    const { email } = req.user;
-    const user = await services.getUserByEmail(email);
-    const { password } = user;
-    const refresh_token = await validatePassword(email, password);
-    if (!password) {
-      res.status(401).json({
-        status: 'fail',
-        message: 'Unable to authenticate refresh token',
+    const { refresh_token } = req.body;
+    client.set('refresh_token', refresh_token);
+
+    if (refresh_token) {
+      const user = jwt.verify(refresh_token, env.REFRESH_TOKEN);
+      const token = await generateToken(user);
+
+      res.status(200).json({
+        access_token: token.access_token,
+        refresh_token: token.refresh_token,
       });
     } else {
-      res.status(200).json({
-        refresh_token,
+      res.status(401).json({
+        status: 'fail',
+        message: 'Invalid request',
       });
     }
   } catch (error) {

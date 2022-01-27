@@ -1,5 +1,5 @@
 import express from 'express';
-import { createNewUser, login } from '../controller/authentication';
+import { createNewUser, login, refreshToken } from '../controller/authentication';
 import { createPurchase, updateApprovalStatus } from '../controller/purchase';
 import { createSales } from '../controller/sales';
 import { getAnItemByName, getTotalStocks } from '../controller/stock';
@@ -7,7 +7,7 @@ import {
   getUsers, getAUserById, deleteAUserById, updateAUserById, updateSchedule,
 } from '../controller/user';
 import { checkIfEmailExists, checkIfUserIsAdmin, verifyToken } from '../middleware/auth';
-import cache, { refreshCache } from '../middleware/cache';
+import { cache, refreshCache } from '../middleware/cache';
 import { checkApprovalStatus, checkIfProductExistsById, checkIfProductExistsByName } from '../middleware/checkProduct';
 import updateStockPriceAndQuantity from '../middleware/productCheck';
 import validateInput from '../middleware/validation';
@@ -15,7 +15,7 @@ import { createPurchaseSchema, createUserSchema, loginUserSchema } from '../vali
 
 const router = express.Router();
 
-router.get('/api/v1/refresh_token', verifyToken('user'), refreshCache);
+router.post('/api/v1/refresh_token', refreshCache, refreshToken);
 
 router.post('/api/v1/register', validateInput(createUserSchema, 'body'), verifyToken('admin'), checkIfUserIsAdmin, checkIfEmailExists, createNewUser);
 router.post('/api/v1/login', validateInput(loginUserSchema, 'body'), login);

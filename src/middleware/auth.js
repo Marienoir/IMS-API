@@ -19,7 +19,7 @@ export const verifyToken = (type) => async (req, res, next) => {
       });
     }
 
-    const tokenValidated = jwt.verify(token, env.IMS_API_TOKEN_KEY);
+    const tokenValidated = jwt.verify(token, env.ACCESS_TOKEN);
     if (type === 'admin') {
       req.admin = tokenValidated;
     }

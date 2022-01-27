@@ -3,11 +3,11 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import morgan from 'morgan';
+// import morgan from 'morgan';
 import db from './config/db';
 import route from './router';
 import env from './config/env';
-import logger from './config/logger';
+// import logger from './config/logger';
 import { activateCronSchedule, deactivateCronSchedule } from './services/cronSchedule';
 import { connectRedis } from './config/redis/index';
 
@@ -29,11 +29,11 @@ app.use(
   }),
 );
 
-logger.error('Error log example');
-logger.warn('Warn log example');
-logger.info('Info log example');
+// logger.error('Error log example');
+// logger.warn('Warn log example');
+// logger.info('Info log example');
 
-app.use(morgan('tiny', { stream: logger.stream }));
+// app.use(morgan('tiny', { stream: logger.stream }));
 
 app.get('/', (req, res) => {
   res.status(200).json({

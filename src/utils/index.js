@@ -21,7 +21,7 @@ export const generateToken = (user) => {
       role: user.role,
       status: user.status,
     },
-    env.IMS_API_TOKEN_KEY,
+    env.ACCESS_TOKEN,
     {
       expiresIn: '1hr',
     },
@@ -35,11 +35,10 @@ export const generateToken = (user) => {
       last_name: user.last_name,
       role: user.role,
       status: user.status,
-      type: process.env.IMS_API_REFRESH_KEY,
     },
-    env.IMS_API_TOKEN_KEY,
+    env.REFRESH_TOKEN,
     {
-      expiresIn: '12hr',
+      expiresIn: '72hr',
     },
   );
 

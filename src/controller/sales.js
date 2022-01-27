@@ -1,6 +1,7 @@
 /* eslint-disable consistent-return */
 /* eslint-disable camelcase */
 import paginate from '../middleware/pagination';
+import createActivityLogs from '../services/activityServices';
 import { createSale, getAllSales } from '../services/salesServices';
 import { updateStockQuantity } from '../services/stockServices';
 import { getUserByEmail } from '../services/userServices';
@@ -16,6 +17,11 @@ export const createSales = async (req, res, next) => {
       req.body.sales_personnel_id = user.id;
 
       const data = await createSale(req.body);
+      req.body.user_id = user.id;
+      req.body.sales_id = data.id;
+      req.body.activity = 'Create Sales Order';
+
+      await createActivityLogs(req.body);
       await updateStockQuantity(data.id);
       return res.status(201).json({
         code: 201,
