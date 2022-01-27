@@ -9,7 +9,7 @@ import { getUserByEmail } from '../services/userServices';
 
 dotenv.config();
 
-export const verifyToken = async (req, res, next) => {
+export const verifyToken = (type) => async (req, res, next) => {
   try {
     const token = req.headers['x-access-token'];
     if (!token) {
@@ -19,7 +19,10 @@ export const verifyToken = async (req, res, next) => {
       });
     }
 
-    const tokenValidated = jwt.verify(token, env.IMS_API_TOKEN_KEY);
+    const tokenValidated = jwt.verify(token, env.ACCESS_TOKEN);
+    if (type === 'admin') {
+      req.admin = tokenValidated;
+    }
     req.user = tokenValidated;
     return next();
   } catch (err) {

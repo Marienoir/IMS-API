@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "--exec babel-node src/index.js",
+    "start": "babel-node src/index.js",
     "dev": "nodemon --exec babel-node src/index.js",
     "test": "mocha test --exit --timeout=150000"
   },
@@ -13,24 +13,31 @@
   "license": "ISC",
   "dependencies": {
     "app-root-path": "^3.0.0",
+    "axios": "^0.25.0",
     "bcryptjs": "^2.4.3",
     "bluebird": "^3.7.2",
     "chai": "^4.3.4",
     "cors": "^2.8.5",
     "cron": "^1.8.2",
     "cross-env": "^7.0.3",
+    "dayjs": "^1.10.7",
     "db-migrate": "^0.11.13",
     "db-migrate-pg": "^1.2.2",
     "dotenv": "^11.0.0",
     "esm": "^3.2.25",
     "express": "^4.17.2",
+    "fetch": "^1.1.0",
     "joi": "^17.5.0",
     "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.10.0",
     "node-cron": "^3.0.0",
+    "node-fetch": "^3.2.0",
     "nodemon": "^2.0.14",
     "pg-promise": "^10.11.1",
+    "redis": "^4.0.2",
     "supertest": "^6.2.0",
-    "winston": "^3.4.0"
+    "winston": "^3.1.0",
+    "winston-daily-rotate-file": "^3.5.1"
   },
   "devDependencies": {
     "@babel/core": "^7.16.7",

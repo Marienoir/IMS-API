@@ -1,8 +1,3 @@
-/* eslint-disable implicit-arrow-linebreak */
-/* eslint-disable max-len */
-/* eslint-disable import/no-cycle */
-/* eslint-disable camelcase */
-/* eslint-disable import/extensions */
 import db from '../config/db';
 import stockQueries from '../db/queries/stock';
 
@@ -18,3 +13,5 @@ export const getProductByName = (item) => db.oneOrNone(stockQueries.getItemByNam
 export const getAllStocks = (limit, offset) => db.any(stockQueries.getAllStocks, [limit, offset]);
 
 export const updateStock = (id) => db.oneOrNone(stockQueries.updateStock, [id]);
+
+export const updateStockQuantity = (id) => db.oneOrNone(stockQueries.updateStockQuantity, [id]);
