@@ -3,11 +3,10 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
-// import morgan from 'morgan';
+import logger from './config/logger';
 import db from './config/db';
 import route from './router';
 import env from './config/env';
-// import logger from './config/logger';
 import { activateCronSchedule, deactivateCronSchedule } from './services/cronSchedule';
 import { connectRedis } from './config/redis/index';
 
@@ -29,11 +28,12 @@ app.use(
   }),
 );
 
-// logger.error('Error log example');
-// logger.warn('Warn log example');
-// logger.info('Info log example');
-
-// app.use(morgan('tiny', { stream: logger.stream }));
+logger.error('Error log example');
+logger.warn('Warn log example');
+logger.info('Info log example');
+logger.verbose('Verbose log exmaple');
+logger.debug('Debug log exmaple');
+logger.silly('Silly log example');
 
 app.get('/', (req, res) => {
   res.status(200).json({
@@ -69,7 +69,7 @@ db.connect()
       obj.done();
       activateCronSchedule();
       deactivateCronSchedule();
-      console.log(`Starting on port ${port}`);
+      logger.info(`Starting on port ${port}`);
     });
   })
   .catch((error) => {

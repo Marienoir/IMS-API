@@ -40,3 +40,21 @@ export const createStockchema = {
   }),
   message: 'Error creating Stock',
 };
+
+export const createSaleschema = {
+  schema: Joi.object().keys({
+    item: Joi.string().required(),
+    quantity: Joi.number().required(),
+    price: Joi.number().required(),
+    customer_name: Joi.string(),
+    customer_email: Joi.string().email(),
+  }),
+  message: 'Error creating Sales',
+};
+
+export const refreshTokenSchema = {
+  schema: Joi.object().keys({
+    refresh_token: Joi.string().required(),
+  }),
+  message: 'Error creating refresh token',
+};
