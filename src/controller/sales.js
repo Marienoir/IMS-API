@@ -43,12 +43,12 @@ export const getTotalSales = async (req, res, next) => {
     const pagination = await paginate(req);
     const { limit, offset } = pagination;
 
-    const stocks = await getAllSales(limit, offset);
-    if (stocks.length !== 0) {
+    const sales = await getAllSales(limit, offset);
+    if (sales.length !== 0) {
       return res.status(200).json({
         code: 200,
         message: 'All Sales Gotten successfully',
-        stocks,
+        sales,
       });
     }
     return res.status(404).json({

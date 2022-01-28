@@ -1,0 +1,40 @@
+{"message":"Error log example","level":"error"}
+{"message":"Warn log example","level":"warn"}
+{"message":"Info log example","level":"info"}
+{"message":"Starting on port 8080","level":"info"}
+{"message":"Error log example","level":"error"}
+{"message":"Warn log example","level":"warn"}
+{"message":"Info log example","level":"info"}
+{"message":"Starting on port 8080","level":"info"}
+{"message":"Error log example","level":"error"}
+{"message":"Warn log example","level":"warn"}
+{"message":"Info log example","level":"info"}
+{"message":"Starting on port 8080","level":"info"}
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+2022-01-27T15:06:54.469Z - [ERROR  ] Error log example
+2022-01-27T15:06:54.470Z - [WARN   ] Warn log example
+2022-01-27T15:06:54.470Z - [INFO   ] Info log example
+2022-01-27T15:06:54.484Z - [INFO   ] Starting on port 8080
+2022-01-27T15:07:16.653Z - [ERROR  ] Error log example
+2022-01-27T15:07:16.653Z - [WARN   ] Warn log example
+2022-01-27T15:07:16.653Z - [INFO   ] Info log example
+2022-01-27T15:07:16.668Z - [INFO   ] Starting on port 8080
+2022-01-27T15:07:38.954Z - [ERROR] Error log example
+2022-01-27T15:07:38.955Z - [WARN] Warn log example
+2022-01-27T15:07:38.955Z - [INFO] Info log example
+2022-01-27T15:07:38.969Z - [INFO] Starting on port 8080
+2022-01-27T15:08:03.101Z - [INFO] Info log example
+2022-01-27T15:08:03.115Z - [INFO] Starting on port 8080
+2022-01-27T15:08:08.692Z - [INFO] Starting on port 8080
+2022-01-27T15:08:15.532Z - [INFO] Starting on port 8080
+2022-01-27T15:08:25.389Z - [ERROR] Error log example
+2022-01-27T15:08:25.389Z - [WARN] Warn log example
+2022-01-27T15:08:25.389Z - [INFO] Info log example
+2022-01-27T15:08:25.402Z - [INFO] Starting on port 8080

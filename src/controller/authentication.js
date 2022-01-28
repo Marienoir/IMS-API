@@ -3,6 +3,7 @@
 /* eslint-disable camelcase */
 /* eslint-disable no-unused-vars */
 import jwt from 'jsonwebtoken';
+import jwt_decode from 'jwt-decode';
 import env from '../config/env';
 import * as services from '../services/userServices';
 import { client } from '../config/redis';
@@ -31,6 +32,9 @@ export const login = async (req, res, next) => {
     const token = await validatePassword(email, password);
     const { access_token, refresh_token } = token;
 
+    const decodedToken = jwt_decode(refresh_token);
+    client.set(decodedToken.email, refresh_token);
+
     if (!token) {
       res.status(401).json({
         status: 'fail',
@@ -50,8 +54,9 @@ export const login = async (req, res, next) => {
 
 export const refreshToken = async (req, res, next) => {
   try {
+    const { email } = req.user;
     const { refresh_token } = req.body;
-    client.set('refresh_token', refresh_token);
+    client.set(email, refresh_token);
 
     if (refresh_token) {
       const user = jwt.verify(refresh_token, env.REFRESH_TOKEN);
