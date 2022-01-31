@@ -1,5 +1,7 @@
 import express from 'express';
-import { createNewUser, login, refreshToken } from '../controller/authentication';
+import {
+  createNewAdmin, createNewUser, login, refreshToken,
+} from '../controller/authentication';
 import { createPurchase, updateApprovalStatus } from '../controller/purchase';
 import { createRefunds, getTotalRefunds, updateStockIfNotFaulty } from '../controller/refund';
 import { createSales, getTotalSales } from '../controller/sales';
@@ -16,12 +18,14 @@ import {
 import updateStockPriceAndQuantity from '../middleware/productCheck';
 import validateInput from '../middleware/validation';
 import {
+  createAdminSchema,
   createPurchaseSchema, createUserSchema, loginUserSchema, refreshTokenSchema,
 } from '../validation';
 
 const router = express.Router();
 // AUTHENTICATION
 router.post('/api/v1/auth/refresh_token', validateInput(refreshTokenSchema, 'body'), verifyToken('user'), refreshCache, refreshToken);
+router.post('/api/v1/auth/admin_register', validateInput(createAdminSchema, 'body'), checkIfEmailExists, createNewAdmin);
 router.post('/api/v1/auth/register', validateInput(createUserSchema, 'body'), verifyToken('admin'), checkIfUserIsAdmin, checkIfEmailExists, createNewUser);
 router.post('/api/v1/auth/login', validateInput(loginUserSchema, 'body'), login);
 // USER ENDPOINTS

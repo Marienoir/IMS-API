@@ -14,6 +14,19 @@ export const createUserSchema = {
   message: 'Error creating user',
 };
 
+export const createAdminSchema = {
+  schema: Joi.object().keys({
+    first_name: Joi.string().required(),
+    last_name: Joi.string().required(),
+    email: Joi.string().email().required(),
+    image_url: Joi.string().required(),
+    phone_number: Joi.number().required(),
+    gender: Joi.string().required(),
+    password: Joi.string().lowercase().required(),
+  }),
+  message: 'Error creating admin',
+};
+
 export const loginUserSchema = {
   schema: Joi.object().keys({
     email: Joi.string().email().required().lowercase(),

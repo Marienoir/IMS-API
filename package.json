@@ -7,7 +7,15 @@
     "start": "node src/index.js",
     "babel-node": "babel-node --presets='@babel/preset-env'",
     "dev": "nodemon --exec npm run babel-node -- src/index.js",
-    "test": "mocha --exit --timeout=15000000"
+    "pretest": "npm run migrate-test:down && npm run migrate-test:up && npm run migrate-seeds:up",
+    "test": "cross-env IMS_API_NODE_ENV=test mocha --exit --recursive --timeout=150000 test/index.js",
+    "posttest": "npm run migrate-test:down",
+    "migrate-up:seeds": "db-migrate up:seeds",
+    "migrate:up": "db-migrate up",
+    "migrate:down": "db-migrate down -c 100",
+    "migrate-seeds:up": "db-migrate up:seeds --config database.json -e test",
+    "migrate-test:up": "db-migrate up --config database.json -e test",
+    "migrate-test:down": "db-migrate down -c 100 --config database.json -e test"
   },
   "keywords": [],
   "author": "Mary",
