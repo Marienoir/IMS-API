@@ -39,7 +39,7 @@ app.get('/', (req, res) => {
   res.status(200).json({
     code: 200,
     status: 'Success',
-    message: 'Welcome to IMS',
+    message: 'Welcome to Inventory Management System',
   });
 });
 
@@ -61,7 +61,7 @@ app.use((err, req, res, next) => {
   });
 });
 
-connectRedis();
+// connectRedis();
 
 db.connect()
   .then((obj) => {

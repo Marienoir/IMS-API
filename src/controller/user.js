@@ -15,10 +15,10 @@ dotenv.config();
 
 export const getUsers = async (req, res, next) => {
   try {
-    const { name } = req.query;
+    const { name, all } = req.query;
     const pagination = await paginate(req);
     const { limit, offset } = pagination;
-    const users = await getAllUsers(limit, offset, name);
+    const users = await getAllUsers(limit, offset, all, name);
 
     const redisValue = JSON.stringify(users);
     client.set('users', redisValue);

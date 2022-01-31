@@ -42,7 +42,7 @@ export const login = async (req, res, next) => {
       });
     } else {
       res.status(200).json({
-        message: 'User is authenticated',
+        message: 'Login successful',
         access_token,
         refresh_token,
       });

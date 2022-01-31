@@ -19,13 +19,16 @@ export const createUser = async (body) => {
   return db.one(authQueries.addUser, payload);
 };
 
-export const getUserByEmail = (email) => db.one(authQueries.getUserByEmail, email);
+export const getUserByEmail = (email) => db.oneOrNone(authQueries.getUserByEmail, email);
 
-export const getAllUsers = (limit, offset, search = '') => {
+export const getAllUsers = (limit, offset, all, search = '') => {
   if (search) {
     return db.any(userQueries.searchUserByFirstName, search);
   }
-  return db.any(userQueries.getAllUsers, [limit, offset]);
+  if (all) {
+    return db.any(userQueries.getAllUsers);
+  }
+  return db.any(userQueries.getPaginatedUsers, [limit, offset]);
 };
 
 export const getUserById = async (id) => db.oneOrNone(userQueries.getUserById, [id]);
