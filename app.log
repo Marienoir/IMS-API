@@ -2312,3 +2312,24 @@ undefined
 2022-01-31T09:58:46.560Z - [WARN] Warn log example
 2022-01-31T09:58:46.560Z - [INFO] Info log example
 2022-01-31T09:58:46.646Z - [INFO] Starting on port 8080
+2022-01-31T10:02:41.006Z - [ERROR] Error log example
+2022-01-31T10:02:41.007Z - [WARN] Warn log example
+2022-01-31T10:02:41.007Z - [INFO] Info log example
+2022-01-31T10:02:41.098Z - [INFO] Starting on port 8080
+2022-01-31T10:03:05.935Z - [ERROR] Error log example
+2022-01-31T10:03:05.936Z - [WARN] Warn log example
+2022-01-31T10:03:05.936Z - [INFO] Info log example
+2022-01-31T10:03:06.012Z - [INFO] Starting on port 8080
+2022-01-31T10:05:27.158Z - [ERROR] Error log example
+2022-01-31T10:05:27.159Z - [WARN] Warn log example
+2022-01-31T10:05:27.159Z - [INFO] Info log example
+2022-01-31T10:05:27.233Z - [INFO] Starting on port 8080
+2022-01-31T10:06:14.465Z - [ERROR] Error log example
+2022-01-31T10:06:14.466Z - [WARN] Warn log example
+2022-01-31T10:06:14.466Z - [INFO] Info log example
+2022-01-31T10:06:14.554Z - [INFO] Starting on port 8080
+2022-01-31T10:06:35.870Z - [ERROR] Error log example
+2022-01-31T10:06:35.871Z - [WARN] Warn log example
+2022-01-31T10:06:35.871Z - [INFO] Info log example
+2022-01-31T10:06:35.940Z - [INFO] Starting on port 8080
+2022-01-31T10:07:11.441Z - [INFO] Starting on port 8080

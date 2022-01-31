@@ -28,13 +28,6 @@ app.use(
   }),
 );
 
-logger.error('Error log example');
-logger.warn('Warn log example');
-logger.info('Info log example');
-logger.verbose('Verbose log exmaple');
-logger.debug('Debug log exmaple');
-logger.silly('Silly log example');
-
 app.get('/', (req, res) => {
   res.status(200).json({
     code: 200,
@@ -61,7 +54,7 @@ app.use((err, req, res, next) => {
   });
 });
 
-// connectRedis();
+connectRedis();
 
 db.connect()
   .then((obj) => {
