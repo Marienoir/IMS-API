@@ -49,7 +49,6 @@ export const login = async (req, res, next) => {
 
     const decodedToken = jwt_decode(refresh_token);
     client.set(decodedToken.email, refresh_token);
-
     if (!token) {
       res.status(401).json({
         status: 'fail',

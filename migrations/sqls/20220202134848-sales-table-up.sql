@@ -5,7 +5,7 @@ CREATE TABLE IF NOT EXISTS sales(
   item varchar,
   quantity numeric not null,
   price numeric not null,
-  sales_personnel_id integer REFERENCES users(id),
+  sales_personnel_id integer REFERENCES users(id) ON DELETE CASCADE ON UPDATE cascade,
   payment_status varchar DEFAULT 'cash',
   customer_name varchar,
   customer_email varchar,

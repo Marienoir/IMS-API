@@ -1,2 +1,2 @@
 /* Replace with your SQL commands */
-DROP TABLE IF EXISTS approval;
+DROP TABLE IF EXISTS users CASCADE;
