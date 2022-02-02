@@ -11,10 +11,14 @@ const salesQueries = {
           ) VALUES ($1, $2, $3, $4, $5, $6, $7)
           RETURNING *
             `,
+  getSoldItemByName: `
+          SELECT * FROM sales
+          WHERE item=$1 
+  `,
   getAllSales: `
-            SELECT * FROM sales
-            ORDER BY id limit $1 offset $2
-            `,
+          SELECT * FROM sales
+          ORDER BY id limit $1 offset $2
+          `,
 };
 
 export default salesQueries;

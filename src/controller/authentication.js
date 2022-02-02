@@ -24,6 +24,21 @@ export const createNewUser = async (req, res, next) => {
   }
 };
 
+export const createNewAdmin = async (req, res, next) => {
+  try {
+    const { body } = req;
+    const data = await services.createAdmin(body);
+
+    return res.status(201).json({
+      code: 201,
+      data,
+      message: 'Admin created successfully',
+    });
+  } catch (error) {
+    return next(error);
+  }
+};
+
 export const login = async (req, res, next) => {
   try {
     const { email, password } = req.body;
@@ -42,7 +57,7 @@ export const login = async (req, res, next) => {
       });
     } else {
       res.status(200).json({
-        message: 'User is authenticated',
+        message: 'Login successful',
         access_token,
         refresh_token,
       });

@@ -50,8 +50,7 @@ export const checkIfUserIsAdmin = async (req, res, next) => {
 export const checkIfEmailExists = async (req, res, next) => {
   try {
     const { email } = req.body;
-    const [user] = await getUserByEmail(email);
-
+    const user = await getUserByEmail(email);
     if (user) {
       return res.status(403).json({
         status: 'Failed',

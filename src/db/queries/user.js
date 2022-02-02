@@ -1,5 +1,5 @@
 const userQueries = {
-  getAllUsers: `
+  getPaginatedUsers: `
         SELECT 
             id,
             first_name,
@@ -16,6 +16,23 @@ const userQueries = {
         FROM users
         WHERE users.deleted = 'FALSE'
         ORDER BY id limit $1 offset $2
+        `,
+  getAllUsers: `
+        SELECT 
+            id,
+            first_name,
+            last_name,
+            email,
+            image_url,
+            phone_number,
+            gender,
+            role,
+            deleted,
+            status,
+            verification_status,
+            last_login
+        FROM users
+        WHERE users.deleted = 'FALSE'
         `,
   getUserById: `
         SELECT 

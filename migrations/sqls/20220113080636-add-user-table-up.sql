@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS users (
     phone_number varchar NOT NULL,
     gender varchar NOT NULL,
     password varchar NOT NULL,
-    role varchar NOT NULL REFERENCES roles(role_code),
+    role varchar default 'ADM' NOT NULL REFERENCES roles(role_code) ON DELETE CASCADE on update cascade,
     deleted boolean default false NOT NULL,
     status varchar default 'active' NOT NULL,
     reset_password_token varchar,

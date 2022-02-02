@@ -1,6 +1,9 @@
 import express from 'express';
-import { createNewUser, login, refreshToken } from '../controller/authentication';
+import {
+  createNewAdmin, createNewUser, login, refreshToken,
+} from '../controller/authentication';
 import { createPurchase, updateApprovalStatus } from '../controller/purchase';
+import { createRefunds, getTotalRefunds, updateStockIfNotFaulty } from '../controller/refund';
 import { createSales, getTotalSales } from '../controller/sales';
 import { getAnItemByName, getTotalStocks } from '../controller/stock';
 import {
@@ -8,16 +11,21 @@ import {
 } from '../controller/user';
 import { checkIfEmailExists, checkIfUserIsAdmin, verifyToken } from '../middleware/auth';
 import { cache, refreshCache } from '../middleware/cache';
-import { checkApprovalStatus, checkIfProductExistsById, checkIfProductExistsByName } from '../middleware/checkProduct';
+import {
+  checkApprovalStatus, checkIfProductExistsById,
+  checkIfProductExistsByName,
+} from '../middleware/checkProduct';
 import updateStockPriceAndQuantity from '../middleware/productCheck';
 import validateInput from '../middleware/validation';
 import {
+  createAdminSchema,
   createPurchaseSchema, createUserSchema, loginUserSchema, refreshTokenSchema,
 } from '../validation';
 
 const router = express.Router();
 // AUTHENTICATION
 router.post('/api/v1/auth/refresh_token', validateInput(refreshTokenSchema, 'body'), verifyToken('user'), refreshCache, refreshToken);
+router.post('/api/v1/auth/admin_register', validateInput(createAdminSchema, 'body'), checkIfEmailExists, createNewAdmin);
 router.post('/api/v1/auth/register', validateInput(createUserSchema, 'body'), verifyToken('admin'), checkIfUserIsAdmin, checkIfEmailExists, createNewUser);
 router.post('/api/v1/auth/login', validateInput(loginUserSchema, 'body'), login);
 // USER ENDPOINTS
@@ -35,5 +43,7 @@ router.get('/api/v1/stocks', verifyToken('user'), getTotalStocks);
 // SALES ENDPOINTS
 router.post('/api/v1/sales/create', verifyToken('user'), checkIfProductExistsByName, createSales);
 router.get('/api/v1/sales', verifyToken('user'), getTotalSales);
-
+// REFUND ENDPOINTS
+router.post('/api/v1/item/refund', verifyToken('user'), createRefunds, updateStockIfNotFaulty);
+router.get('/api/v1/refunded_items', verifyToken('user'), getTotalRefunds);
 export default router;
