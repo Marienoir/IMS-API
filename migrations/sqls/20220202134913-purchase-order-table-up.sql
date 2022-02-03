@@ -4,7 +4,7 @@ CREATE TABLE IF NOT EXISTS purchase(
   item varchar not null,
   quantity numeric not null,
   price numeric not null,
-  approval_status varchar not null,
+  approval_status approval_status,
   delivery_time varchar not null,
   created_at timestamp default now(),
   updated_at timestamp default now()
