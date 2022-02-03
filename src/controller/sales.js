@@ -1,6 +1,5 @@
 /* eslint-disable consistent-return */
 /* eslint-disable camelcase */
-import paginate from '../middleware/pagination';
 import createActivityLogs from '../services/activityServices';
 import { createSale, getAllSales } from '../services/salesServices';
 import { updateStockQuantity } from '../services/stockServices';
@@ -40,10 +39,7 @@ export const createSales = async (req, res, next) => {
 
 export const getTotalSales = async (req, res, next) => {
   try {
-    const pagination = await paginate(req);
-    const { limit, offset } = pagination;
-
-    const sales = await getAllSales(limit, offset);
+    const sales = await getAllSales();
     if (sales.length !== 0) {
       return res.status(200).json({
         code: 200,

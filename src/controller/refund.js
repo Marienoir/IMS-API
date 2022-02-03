@@ -1,6 +1,5 @@
 /* eslint-disable consistent-return */
 /* eslint-disable camelcase */
-import paginate from '../middleware/pagination';
 import { createRefund, getAllRefunds, updateStockQuantity } from '../services/refund';
 import { getSoldItemByName } from '../services/salesServices';
 import { getUserByEmail } from '../services/userServices';
@@ -47,10 +46,8 @@ export const updateStockIfNotFaulty = async (req, res, next) => {
 export const getTotalRefunds = async (req, res, next) => {
   try {
     const { reason, all } = req.query;
-    const pagination = await paginate(req);
-    const { limit, offset } = pagination;
 
-    const refunds = await getAllRefunds(limit, offset, all, reason);
+    const refunds = await getAllRefunds(all, reason);
     if (refunds.length !== 0) {
       return res.status(200).json({
         code: 200,

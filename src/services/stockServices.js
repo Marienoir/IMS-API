@@ -10,7 +10,7 @@ export const createStock = async (body) => {
 
 export const getProductByName = (item) => db.oneOrNone(stockQueries.getItemByName, [item]);
 
-export const getAllStocks = (limit, offset) => db.any(stockQueries.getAllStocks, [limit, offset]);
+export const getAllStocks = () => db.any(stockQueries.getAllStocks);
 
 export const updateStock = (id) => db.oneOrNone(stockQueries.updateStock, [id]);
 

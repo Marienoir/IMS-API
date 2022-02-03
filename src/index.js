@@ -62,7 +62,7 @@ db.connect()
       obj.done();
       activateCronSchedule();
       deactivateCronSchedule();
-      logger.info(`Starting on port ${port}`);
+      // logger.info(`Starting on port ${port}`);
     });
   })
   .catch((error) => {

@@ -24,7 +24,7 @@ let userEmail = `richard.${uuid.v1()}@mail.com`;
 let email = 'mike.scofield@gmail.com';
 let password = '12345';
 
-describe('Seed Admin Role', () => {
+describe('', () => {
   before(async () => {
     const addAdminRole = new PS({ name: 'seed-role', text: 'INSERT INTO roles(role_code, role_name) VALUES($1, $2), ($3, $4)' });
     db.none(addAdminRole, ['ADM', 'ADMIN', 'SUP', 'SUPERVISOR']);
@@ -51,7 +51,7 @@ describe('Seed Admin Role', () => {
   });
   // AUTHENTICATION
   describe('Admin Registration', () => {
-    it.skip('should register a user with the role of an admin', (done) => {
+    it('should register a user with the role of an admin', (done) => {
       request(app)
         .post('/api/v1/auth/admin_register')
         .send({
@@ -244,7 +244,7 @@ describe('Seed Admin Role', () => {
         });
     });
   });
-
+  // PURCHASE ENDPOINTS
   describe('Create a Purchase Order', () => {
     it('should create a purchase order', (done) => {
       request(app)
@@ -292,6 +292,111 @@ describe('Seed Admin Role', () => {
         .end((err, res) => {
           expect(res.status).to.equal(400);
           expect(res.body.message).to.equal('Item already approved');
+          done();
+        });
+    });
+  });
+
+  // STOCK ENDPOINTS
+  describe('Get a product available in Stock By Item Name', () => {
+    it('should get a product available in stock', (done) => {
+      request(app)
+        .get(`/api/v1/stock?item=${item}`)
+        .set('x-access-token', `${user_token}`)
+        .expect(200)
+        .end((err, res) => {
+          expect(res.status).to.equal(200);
+          expect(res.body.message).to.equal(`${item} fetched successfully`);
+          expect(res.body.data).to.be.an('object');
+          done();
+        });
+    });
+  });
+
+  describe('Get items available in stock', () => {
+    it('should get total products available in stock', (done) => {
+      request(app)
+        .get('/api/v1/stocks')
+        .set('x-access-token', `${user_token}`)
+        .expect(200)
+        .end((err, res) => {
+          expect(res.status).to.equal(200);
+          expect(res.body.message).to.equal('All Stocks Gotten successfully');
+          expect(res.body.stocks).to.be.an('array');
+          done();
+        });
+    });
+  });
+
+  // SALES ENDPOINTS
+  describe('Create a Sales Order', () => {
+    it('should create a sales order', (done) => {
+      request(app)
+        .post('/api/v1/sales/create')
+        .set('x-access-token', `${user_token}`)
+        .send({
+          item: `${item}`,
+          quantity: 10,
+          price: 8000,
+          customer_name: 'Kate Beckely',
+          customer_email: `kate.${uuid.v1()}@mail.com`,
+        })
+        .expect(201)
+        .end((err, res) => {
+          expect(res.status).to.equal(201);
+          expect(res.body.message).to.equal('Sales Order created successfully');
+          expect(res.body.data).to.be.an('object');
+          done();
+        });
+    });
+  });
+
+  describe('Get all Sales Order', () => {
+    it('should get the total sales order', (done) => {
+      request(app)
+        .get('/api/v1/sales')
+        .set('x-access-token', `${user_token}`)
+        .expect(200)
+        .end((err, res) => {
+          expect(res.status).to.equal(200);
+          expect(res.body.message).to.equal('All Sales Gotten successfully');
+          expect(res.body.sales).to.be.an('array');
+          done();
+        });
+    });
+  });
+
+  // REFUND ENDPOINTS
+  describe('Refund Order for sales', () => {
+    it('should create a refund order for sold items', (done) => {
+      request(app)
+        .post('/api/v1/item/refund')
+        .set('x-access-token', `${user_token}`)
+        .send({
+          item: `${item}`,
+          quantity: 5,
+          reason: 'NON-FAULTY',
+        })
+        .expect(201)
+        .end((err, res) => {
+          expect(res.status).to.equal(201);
+          expect(res.body.message).to.equal('Item refund successfully');
+          expect(res.body.refundedItem).to.be.an('object');
+          done();
+        });
+    });
+  });
+
+  describe('Get All Refunded Orders', () => {
+    it('should return all refunded items', (done) => {
+      request(app)
+        .get('/api/v1/refunded_items')
+        .set('x-access-token', `${user_token}`)
+        .expect(200)
+        .end((err, res) => {
+          expect(res.status).to.equal(200);
+          expect(res.body.message).to.equal('All Refunds Gotten successfully');
+          expect(res.body.refunds).to.be.an('array');
           done();
         });
     });

@@ -1,4 +1,3 @@
-import paginate from '../middleware/pagination';
 import { getAllStocks, getProductByName } from '../services/stockServices';
 
 export const getAnItemByName = async (req, res, next) => {
@@ -23,10 +22,7 @@ export const getAnItemByName = async (req, res, next) => {
 
 export const getTotalStocks = async (req, res, next) => {
   try {
-    const pagination = await paginate(req);
-    const { limit, offset } = pagination;
-
-    const stocks = await getAllStocks(limit, offset);
+    const stocks = await getAllStocks();
     if (stocks.length !== 0) {
       return res.status(200).json({
         code: 200,

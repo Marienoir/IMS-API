@@ -8,7 +8,7 @@
     "babel-node": "babel-node --presets='@babel/preset-env'",
     "dev": "nodemon --exec npm run babel-node -- src/index.js",
     "pretest": "npm run migrate:down",
-    "test": "npm run migrate:up && cross-env IMS_API_NODE_ENV=test mocha --exit --recursive --timeout=150000 test/index.js",
+    "test": "npm run migrate:up && cross-env IMS_API_TEST_NODE_ENV=test mocha --exit --recursive --timeout=150000 test/index.js",
     "posttest": "npm run migrate:down",
     "migrate-seeds:up": "db-migrate up:seeds",
     "migrate-seeds:down": "db-migrate down:seeds",
