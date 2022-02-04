@@ -11,4 +11,4 @@ export const createSale = async (body) => {
 
 export const getSoldItemByName = (item) => db.oneOrNone(salesQueries.getSoldItemByName, [item]);
 
-export const getAllSales = (limit, offset) => db.any(salesQueries.getAllSales, [limit, offset]);
+export const getAllSales = () => db.any(salesQueries.getAllSales);

@@ -11,12 +11,9 @@ export const createRefund = async (body) => {
 
 export const updateStockQuantity = (id) => db.oneOrNone(refundQueries.updateStockQuantity, [id]);
 
-export const getAllRefunds = (limit, offset, all, search = '') => {
+export const getAllRefunds = (search = '') => {
   if (search) {
     return db.any(refundQueries.searchRefundedItemsByReason, search);
   }
-  if (all) {
-    return db.any(refundQueries.getAllRefunds);
-  }
-  return db.any(refundQueries.getPaginatedRefunds, [limit, offset]);
+  return db.any(refundQueries.getAllRefunds);
 };

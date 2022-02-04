@@ -17,7 +17,6 @@ const salesQueries = {
   `,
   getAllSales: `
           SELECT * FROM sales
-          ORDER BY id limit $1 offset $2
           `,
 };
 
