@@ -103,7 +103,7 @@ const userQueries = {
         SET 
             status = 'inactive',
             updated_at = NOW() 
-        WHERE schedule::date >= current_date
+        WHERE schedule::date >= current_date AND users.id = $1
         RETURNING id, first_name, last_name, email, status, schedule;
     `,
   activateUserStatus: `
@@ -111,7 +111,7 @@ const userQueries = {
     SET 
         status = 'active',
         updated_at = NOW() 
-    WHERE schedule::date >= current_date
+    WHERE schedule::date >= current_date AND users.id = $1
     RETURNING id, first_name, last_name, email, status, schedule;
 `,
 };

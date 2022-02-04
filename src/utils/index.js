@@ -38,7 +38,7 @@ export const generateToken = (user) => {
     },
     env.REFRESH_TOKEN,
     {
-      expiresIn: '72hr',
+      expiresIn: '24hr',
     },
   );
 

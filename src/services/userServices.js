@@ -58,6 +58,6 @@ export const updateStatus = async (id, status) => db.any(userQueries.updateUserS
 
 export const updateUserSchedule = async (schedule, id) => db.any(userQueries.alterUserSchedule, [schedule, id]);
 
-export const deactivateUserStatus = async (status) => db.any(userQueries.deactivateUserStatus, [status]);
+export const deactivateUserStatus = async (status, id) => db.any(userQueries.deactivateUserStatus, [status, id]);
 
-export const activateUserStatus = async (status) => db.any(userQueries.activateUserStatus, [status]);
+export const activateUserStatus = async (status, id) => db.any(userQueries.activateUserStatus, [status, id]);

@@ -16,8 +16,8 @@ export const createNewUser = async (req, res, next) => {
 
     return res.status(201).json({
       code: 201,
-      data,
       message: 'User created successfully',
+      data,
     });
   } catch (error) {
     return next(error);
@@ -31,8 +31,8 @@ export const createNewAdmin = async (req, res, next) => {
 
     return res.status(201).json({
       code: 201,
-      data,
       message: 'Admin created successfully',
+      data,
     });
   } catch (error) {
     return next(error);
@@ -49,6 +49,8 @@ export const login = async (req, res, next) => {
 
     const decodedToken = jwt_decode(refresh_token);
     client.set(decodedToken.email, refresh_token);
+    client.expire(decodedToken.email, 86400);
+
     if (!token) {
       res.status(401).json({
         status: 'fail',
@@ -70,9 +72,9 @@ export const refreshToken = async (req, res, next) => {
   try {
     const { email } = req.user;
     const { refresh_token } = req.body;
-    client.set(email, refresh_token);
 
     if (refresh_token) {
+      client.set(email, refresh_token);
       const user = jwt.verify(refresh_token, env.REFRESH_TOKEN);
       const token = await generateToken(user);
 

@@ -7,7 +7,6 @@ import logger from './config/logger';
 import db from './config/db';
 import route from './router';
 import env from './config/env';
-import { activateCronSchedule, deactivateCronSchedule } from './services/cronSchedule';
 import { connectRedis } from './config/redis/index';
 
 dotenv.config();
@@ -60,8 +59,6 @@ db.connect()
   .then((obj) => {
     app.listen(port, () => {
       obj.done();
-      activateCronSchedule();
-      deactivateCronSchedule();
       logger.info(`Starting on port ${port}`);
     });
   })

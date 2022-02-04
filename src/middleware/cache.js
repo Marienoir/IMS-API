@@ -20,6 +20,7 @@ export const cache = async (req, res, next) => {
 export const refreshCache = async (req, res, next) => {
   const { email } = req.user;
   const refresh_token = await client.get(email);
+
   if (refresh_token !== null) {
     req.body.refresh_token = refresh_token;
   }

@@ -105,11 +105,12 @@ export const updateSchedule = async (req, res, next) => {
     const { id, first_name } = user;
     const scheduledUser = await updateUserSchedule(schedule, id);
 
-    return res.status(200).json({
+    res.status(200).json({
       code: 200,
       message: `A Schedule date has been added for ${first_name} successfully`,
       data: scheduledUser,
     });
+    return next();
   } catch (error) {
     return next(error);
   }

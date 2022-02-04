@@ -2721,3 +2721,589 @@ undefined
 2022-02-03T14:43:20.784Z - [INFO] Starting on port 8080
 2022-02-03T14:44:12.021Z - [INFO] Environment - test
 2022-02-03T14:44:12.659Z - [INFO] Starting on port 8080
+2022-02-04T09:00:07.965Z - [INFO] Environment - development
+2022-02-04T09:00:08.661Z - [INFO] Starting on port 8080
+2022-02-04T09:23:54.751Z - [INFO] Environment - development
+2022-02-04T09:23:55.286Z - [INFO] Starting on port 8080
+2022-02-04T09:23:57.094Z - [INFO] Environment - development
+2022-02-04T09:23:57.563Z - [INFO] Starting on port 8080
+2022-02-04T09:23:59.728Z - [INFO] Environment - development
+2022-02-04T09:24:00.191Z - [INFO] Starting on port 8080
+2022-02-04T09:24:16.788Z - [INFO] Environment - development
+2022-02-04T09:24:17.314Z - [INFO] Starting on port 8080
+2022-02-04T09:44:05.974Z - [INFO] Environment - development
+2022-02-04T09:44:06.493Z - [INFO] Starting on port 8080
+2022-02-04T09:44:10.563Z - [INFO] Environment - development
+2022-02-04T09:44:11.007Z - [INFO] Starting on port 8080
+2022-02-04T09:44:12.795Z - [INFO] Environment - development
+2022-02-04T09:44:13.316Z - [INFO] Starting on port 8080
+2022-02-04T09:47:20.588Z - [INFO] Environment - development
+2022-02-04T09:47:21.115Z - [INFO] Starting on port 8080
+2022-02-04T09:49:25.997Z - [INFO] Environment - development
+2022-02-04T09:49:26.463Z - [INFO] Starting on port 8080
+2022-02-04T09:50:03.372Z - [INFO] Environment - development
+2022-02-04T09:50:03.839Z - [INFO] Starting on port 8080
+2022-02-04T09:51:59.261Z - [INFO] Environment - development
+2022-02-04T09:51:59.796Z - [INFO] Starting on port 8080
+2022-02-04T09:52:15.361Z - [INFO] Environment - development
+2022-02-04T09:52:15.843Z - [INFO] Starting on port 8080
+2022-02-04T09:52:57.444Z - [INFO] Environment - development
+2022-02-04T09:52:57.984Z - [INFO] Starting on port 8080
+2022-02-04T09:53:00.786Z - [INFO] Environment - development
+2022-02-04T09:53:01.247Z - [INFO] Starting on port 8080
+2022-02-04T09:53:04.060Z - [INFO] Environment - development
+2022-02-04T09:53:04.510Z - [INFO] Starting on port 8080
+2022-02-04T09:53:10.611Z - [INFO] Environment - development
+2022-02-04T09:53:11.073Z - [INFO] Starting on port 8080
+2022-02-04T09:53:31.955Z - [INFO] Environment - development
+2022-02-04T09:53:32.458Z - [INFO] Starting on port 8080
+2022-02-04T09:53:34.555Z - [INFO] Environment - development
+2022-02-04T09:53:35.150Z - [INFO] Starting on port 8080
+2022-02-04T09:53:36.662Z - [INFO] Environment - development
+2022-02-04T09:53:37.192Z - [INFO] Starting on port 8080
+2022-02-04T09:54:16.379Z - [INFO] Environment - development
+2022-02-04T09:54:16.875Z - [INFO] Starting on port 8080
+2022-02-04T09:54:41.150Z - [INFO] Environment - development
+2022-02-04T09:54:41.704Z - [INFO] Starting on port 8080
+2022-02-04T09:55:41.788Z - [INFO] Environment - development
+2022-02-04T09:55:42.979Z - [INFO] Environment - development
+2022-02-04T09:55:43.464Z - [INFO] Starting on port 8080
+2022-02-04T09:55:51.310Z - [INFO] Environment - development
+2022-02-04T09:55:51.820Z - [INFO] Starting on port 8080
+2022-02-04T09:55:54.130Z - [INFO] Environment - development
+2022-02-04T09:55:54.598Z - [INFO] Starting on port 8080
+2022-02-04T09:56:04.140Z - [INFO] Environment - development
+2022-02-04T09:56:04.689Z - [INFO] Starting on port 8080
+2022-02-04T09:56:06.876Z - [INFO] Environment - development
+2022-02-04T09:56:07.349Z - [INFO] Starting on port 8080
+2022-02-04T09:56:14.414Z - [INFO] Environment - development
+2022-02-04T09:56:14.919Z - [INFO] Starting on port 8080
+2022-02-04T09:56:25.446Z - [INFO] Environment - development
+2022-02-04T09:56:28.459Z - [INFO] Environment - development
+2022-02-04T09:56:28.978Z - [INFO] Starting on port 8080
+2022-02-04T09:56:30.212Z - [INFO] Environment - development
+2022-02-04T09:56:30.677Z - [INFO] Starting on port 8080
+2022-02-04T09:56:39.502Z - [INFO] Environment - development
+2022-02-04T09:57:02.772Z - [INFO] Environment - development
+2022-02-04T09:57:03.288Z - [INFO] Starting on port 8080
+2022-02-04T10:06:10.746Z - [INFO] Environment - development
+2022-02-04T10:06:11.404Z - [INFO] Starting on port 8080
+2022-02-04T10:06:12.806Z - [INFO] Environment - development
+2022-02-04T10:06:13.298Z - [INFO] Starting on port 8080
+2022-02-04T10:06:16.006Z - [INFO] Environment - development
+2022-02-04T10:06:16.500Z - [INFO] Starting on port 8080
+2022-02-04T10:06:18.123Z - [INFO] Environment - development
+2022-02-04T10:06:18.632Z - [INFO] Starting on port 8080
+2022-02-04T10:06:20.361Z - [INFO] Environment - development
+2022-02-04T10:06:20.845Z - [INFO] Starting on port 8080
+2022-02-04T10:06:23.439Z - [INFO] Environment - development
+2022-02-04T10:06:23.899Z - [INFO] Starting on port 8080
+2022-02-04T10:06:24.946Z - [INFO] Environment - development
+2022-02-04T10:06:25.423Z - [INFO] Starting on port 8080
+2022-02-04T10:06:26.078Z - [INFO] Environment - development
+2022-02-04T10:06:26.541Z - [INFO] Starting on port 8080
+2022-02-04T10:06:30.155Z - [INFO] Environment - development
+2022-02-04T10:06:30.632Z - [INFO] Starting on port 8080
+2022-02-04T10:06:35.838Z - [INFO] Environment - development
+2022-02-04T10:06:41.289Z - [INFO] Environment - development
+2022-02-04T10:06:41.758Z - [INFO] Starting on port 8080
+2022-02-04T10:06:43.598Z - [INFO] Environment - development
+2022-02-04T10:06:44.049Z - [INFO] Starting on port 8080
+2022-02-04T10:07:08.055Z - [INFO] Environment - development
+2022-02-04T10:07:08.602Z - [INFO] Starting on port 8080
+2022-02-04T10:07:14.171Z - [INFO] Environment - development
+2022-02-04T10:07:14.672Z - [INFO] Starting on port 8080
+2022-02-04T10:07:22.443Z - [INFO] Environment - development
+2022-02-04T10:07:24.428Z - [INFO] Environment - development
+2022-02-04T10:07:24.877Z - [INFO] Starting on port 8080
+2022-02-04T10:07:41.379Z - [INFO] Environment - development
+2022-02-04T10:07:41.887Z - [INFO] Starting on port 8080
+2022-02-04T10:08:10.058Z - [INFO] Environment - development
+2022-02-04T10:08:10.581Z - [INFO] Starting on port 8080
+2022-02-04T10:08:27.060Z - [INFO] Environment - development
+2022-02-04T10:08:27.567Z - [INFO] Starting on port 8080
+2022-02-04T10:09:07.952Z - [INFO] Environment - development
+2022-02-04T10:09:08.467Z - [INFO] Starting on port 8080
+2022-02-04T10:10:09.374Z - [INFO] Environment - development
+2022-02-04T10:10:09.917Z - [INFO] Starting on port 8080
+2022-02-04T10:10:12.153Z - [INFO] Environment - development
+2022-02-04T10:10:12.644Z - [INFO] Starting on port 8080
+2022-02-04T10:10:13.828Z - [INFO] Environment - development
+2022-02-04T10:10:14.288Z - [INFO] Starting on port 8080
+2022-02-04T10:10:27.389Z - [INFO] Environment - development
+2022-02-04T10:10:27.852Z - [INFO] Starting on port 8080
+2022-02-04T10:10:36.360Z - [INFO] Environment - development
+2022-02-04T10:10:36.844Z - [INFO] Starting on port 8080
+2022-02-04T10:14:28.505Z - [INFO] Environment - development
+2022-02-04T10:14:29.061Z - [INFO] Starting on port 8080
+2022-02-04T10:28:03.661Z - [INFO] Environment - development
+2022-02-04T10:28:04.177Z - [INFO] Starting on port 8080
+2022-02-04T10:32:30.860Z - [INFO] Environment - development
+2022-02-04T10:32:31.469Z - [INFO] Starting on port 8080
+2022-02-04T10:33:06.020Z - [INFO] Environment - development
+2022-02-04T10:33:06.539Z - [INFO] Starting on port 8080
+2022-02-04T10:43:24.905Z - [INFO] Environment - development
+2022-02-04T10:43:25.427Z - [INFO] Starting on port 8080
+2022-02-04T10:44:29.307Z - [INFO] Environment - development
+2022-02-04T10:44:29.909Z - [INFO] Starting on port 8080
+2022-02-04T10:44:31.196Z - [INFO] Environment - development
+2022-02-04T10:44:31.675Z - [INFO] Starting on port 8080
+2022-02-04T10:44:55.710Z - [INFO] Environment - development
+2022-02-04T10:45:02.735Z - [INFO] Environment - development
+2022-02-04T10:45:17.576Z - [INFO] Environment - development
+2022-02-04T10:45:18.095Z - [INFO] Starting on port 8080
+2022-02-04T10:46:11.653Z - [INFO] Environment - development
+2022-02-04T10:46:12.952Z - [INFO] Environment - development
+2022-02-04T10:46:13.440Z - [INFO] Starting on port 8080
+2022-02-04T10:46:18.964Z - [INFO] Environment - development
+2022-02-04T10:46:19.433Z - [INFO] Starting on port 8080
+2022-02-04T10:46:20.125Z - [INFO] Environment - development
+2022-02-04T10:46:20.571Z - [INFO] Starting on port 8080
+2022-02-04T10:46:39.010Z - [INFO] Environment - development
+2022-02-04T10:46:58.660Z - [INFO] Environment - development
+2022-02-04T10:46:59.169Z - [INFO] Starting on port 8080
+2022-02-04T10:48:11.459Z - [INFO] Environment - development
+2022-02-04T10:48:31.729Z - [INFO] Environment - development
+2022-02-04T10:48:32.240Z - [INFO] Starting on port 8080
+2022-02-04T10:49:07.545Z - [INFO] Environment - development
+2022-02-04T10:49:08.071Z - [INFO] Starting on port 8080
+2022-02-04T10:49:12.033Z - [INFO] Environment - development
+2022-02-04T10:49:12.534Z - [INFO] Starting on port 8080
+2022-02-04T10:49:56.935Z - [INFO] Environment - development
+2022-02-04T10:49:57.456Z - [INFO] Starting on port 8080
+2022-02-04T10:50:01.317Z - [INFO] Environment - development
+2022-02-04T10:50:01.954Z - [INFO] Starting on port 8080
+2022-02-04T10:51:13.654Z - [INFO] Environment - development
+2022-02-04T10:51:14.222Z - [INFO] Starting on port 8080
+2022-02-04T10:51:30.373Z - [INFO] Environment - development
+2022-02-04T10:51:30.885Z - [INFO] Starting on port 8080
+2022-02-04T10:51:32.025Z - [INFO] Environment - development
+2022-02-04T10:51:32.483Z - [INFO] Starting on port 8080
+2022-02-04T10:51:41.744Z - [INFO] Environment - development
+2022-02-04T10:51:42.287Z - [INFO] Starting on port 8080
+2022-02-04T10:51:43.746Z - [INFO] Environment - development
+2022-02-04T10:51:44.232Z - [INFO] Starting on port 8080
+2022-02-04T10:51:45.076Z - [INFO] Environment - development
+2022-02-04T10:51:45.582Z - [INFO] Starting on port 8080
+2022-02-04T10:51:48.205Z - [INFO] Environment - development
+2022-02-04T10:51:48.657Z - [INFO] Starting on port 8080
+2022-02-04T10:51:49.501Z - [INFO] Environment - development
+2022-02-04T10:51:49.949Z - [INFO] Starting on port 8080
+2022-02-04T10:51:56.806Z - [INFO] Environment - development
+2022-02-04T10:51:57.259Z - [INFO] Starting on port 8080
+2022-02-04T10:51:58.136Z - [INFO] Environment - development
+2022-02-04T10:51:58.586Z - [INFO] Starting on port 8080
+2022-02-04T10:52:00.856Z - [INFO] Environment - development
+2022-02-04T10:52:01.316Z - [INFO] Starting on port 8080
+2022-02-04T10:52:17.874Z - [INFO] Environment - development
+2022-02-04T10:52:18.410Z - [INFO] Starting on port 8080
+2022-02-04T10:53:02.774Z - [INFO] Environment - development
+2022-02-04T10:53:03.271Z - [INFO] Starting on port 8080
+2022-02-04T10:53:05.261Z - [INFO] Environment - development
+2022-02-04T10:53:05.714Z - [INFO] Starting on port 8080
+2022-02-04T10:53:09.018Z - [INFO] Environment - development
+2022-02-04T10:53:09.491Z - [INFO] Starting on port 8080
+2022-02-04T10:53:10.186Z - [INFO] Environment - development
+2022-02-04T10:53:10.658Z - [INFO] Starting on port 8080
+2022-02-04T10:53:13.469Z - [INFO] Environment - development
+2022-02-04T10:53:13.929Z - [INFO] Starting on port 8080
+2022-02-04T10:54:25.136Z - [INFO] Environment - development
+2022-02-04T10:54:25.657Z - [INFO] Starting on port 8080
+2022-02-04T10:55:39.119Z - [INFO] Environment - development
+2022-02-04T10:55:39.635Z - [INFO] Starting on port 8080
+2022-02-04T10:57:39.869Z - [INFO] Environment - development
+2022-02-04T10:57:40.399Z - [INFO] Starting on port 8080
+2022-02-04T10:57:42.890Z - [INFO] Environment - development
+2022-02-04T10:57:43.355Z - [INFO] Starting on port 8080
+2022-02-04T10:57:44.784Z - [INFO] Environment - development
+2022-02-04T10:57:45.241Z - [INFO] Starting on port 8080
+2022-02-04T10:58:36.050Z - [INFO] Environment - development
+2022-02-04T10:58:36.647Z - [INFO] Starting on port 8080
+2022-02-04T10:58:43.616Z - [INFO] Environment - development
+2022-02-04T10:58:44.104Z - [INFO] Starting on port 8080
+2022-02-04T11:00:17.869Z - [INFO] Environment - development
+2022-02-04T11:00:18.431Z - [INFO] Starting on port 8080
+2022-02-04T11:00:45.749Z - [INFO] Environment - development
+2022-02-04T11:00:46.219Z - [INFO] Starting on port 8080
+2022-02-04T11:00:56.152Z - [INFO] Environment - development
+2022-02-04T11:00:56.641Z - [INFO] Starting on port 8080
+2022-02-04T11:00:57.342Z - [INFO] Environment - development
+2022-02-04T11:00:57.793Z - [INFO] Starting on port 8080
+2022-02-04T11:01:01.199Z - [INFO] Environment - development
+2022-02-04T11:01:01.689Z - [INFO] Starting on port 8080
+2022-02-04T11:01:10.532Z - [INFO] Environment - development
+2022-02-04T11:01:11.044Z - [INFO] Starting on port 8080
+2022-02-04T11:01:17.762Z - [INFO] Environment - development
+2022-02-04T11:01:18.255Z - [INFO] Starting on port 8080
+2022-02-04T11:01:21.621Z - [INFO] Environment - development
+2022-02-04T11:01:22.139Z - [INFO] Starting on port 8080
+2022-02-04T11:01:58.620Z - [INFO] Environment - development
+2022-02-04T11:01:59.108Z - [INFO] Starting on port 8080
+2022-02-04T11:02:00.499Z - [INFO] Environment - development
+2022-02-04T11:02:00.979Z - [INFO] Starting on port 8080
+2022-02-04T11:02:07.118Z - [INFO] Environment - development
+2022-02-04T11:02:07.659Z - [INFO] Starting on port 8080
+2022-02-04T11:02:10.366Z - [INFO] Environment - development
+2022-02-04T11:02:10.881Z - [INFO] Starting on port 8080
+2022-02-04T11:02:12.474Z - [INFO] Environment - development
+2022-02-04T11:02:12.954Z - [INFO] Starting on port 8080
+2022-02-04T11:02:17.376Z - [INFO] Environment - development
+2022-02-04T11:02:17.834Z - [INFO] Starting on port 8080
+2022-02-04T11:02:23.293Z - [INFO] Environment - development
+2022-02-04T11:02:23.736Z - [INFO] Starting on port 8080
+2022-02-04T11:02:26.489Z - [INFO] Environment - development
+2022-02-04T11:02:26.942Z - [INFO] Starting on port 8080
+2022-02-04T11:02:32.710Z - [INFO] Environment - development
+2022-02-04T11:02:33.157Z - [INFO] Starting on port 8080
+2022-02-04T11:02:44.471Z - [INFO] Environment - development
+2022-02-04T11:02:44.977Z - [INFO] Starting on port 8080
+2022-02-04T11:02:53.343Z - [INFO] Environment - development
+2022-02-04T11:02:53.848Z - [INFO] Starting on port 8080
+2022-02-04T11:03:01.093Z - [INFO] Environment - development
+2022-02-04T11:03:01.544Z - [INFO] Starting on port 8080
+2022-02-04T11:03:16.281Z - [INFO] Environment - development
+2022-02-04T11:03:16.813Z - [INFO] Starting on port 8080
+2022-02-04T11:03:18.926Z - [INFO] Environment - development
+2022-02-04T11:03:36.034Z - [INFO] Environment - development
+2022-02-04T11:03:36.512Z - [INFO] Starting on port 8080
+2022-02-04T11:03:45.501Z - [INFO] Environment - development
+2022-02-04T11:03:45.989Z - [INFO] Starting on port 8080
+2022-02-04T11:04:18.240Z - [INFO] Environment - development
+2022-02-04T11:04:18.709Z - [INFO] Starting on port 8080
+2022-02-04T11:04:23.558Z - [INFO] Environment - development
+2022-02-04T11:04:24.000Z - [INFO] Starting on port 8080
+2022-02-04T11:05:28.476Z - [INFO] Environment - development
+2022-02-04T11:05:28.992Z - [INFO] Starting on port 8080
+2022-02-04T11:06:13.722Z - [INFO] Environment - development
+2022-02-04T11:06:14.203Z - [INFO] Starting on port 8080
+2022-02-04T11:07:30.341Z - [INFO] Environment - development
+2022-02-04T11:07:30.859Z - [INFO] Starting on port 8080
+2022-02-04T11:07:43.554Z - [INFO] Environment - development
+2022-02-04T11:07:44.077Z - [INFO] Starting on port 8080
+2022-02-04T11:10:25.910Z - [INFO] Environment - development
+2022-02-04T11:10:26.428Z - [INFO] Starting on port 8080
+2022-02-04T11:10:33.010Z - [INFO] Environment - development
+2022-02-04T11:10:33.512Z - [INFO] Starting on port 8080
+2022-02-04T11:12:21.491Z - [INFO] Environment - development
+2022-02-04T11:12:22.003Z - [INFO] Starting on port 8080
+2022-02-04T11:17:36.429Z - [INFO] Environment - development
+2022-02-04T11:17:36.953Z - [INFO] Starting on port 8080
+2022-02-04T11:25:22.503Z - [INFO] Environment - development
+2022-02-04T11:25:23.043Z - [INFO] Starting on port 8080
+2022-02-04T11:25:24.662Z - [INFO] Environment - development
+2022-02-04T11:25:25.148Z - [INFO] Starting on port 8080
+2022-02-04T11:25:29.534Z - [INFO] Environment - development
+2022-02-04T11:25:29.993Z - [INFO] Starting on port 8080
+2022-02-04T11:28:06.508Z - [INFO] Environment - development
+2022-02-04T11:28:07.017Z - [INFO] Starting on port 8080
+2022-02-04T11:29:35.582Z - [INFO] Environment - development
+2022-02-04T11:29:36.113Z - [INFO] Starting on port 8080
+2022-02-04T11:29:51.505Z - [INFO] Environment - development
+2022-02-04T11:29:52.037Z - [INFO] Starting on port 8080
+2022-02-04T11:30:10.692Z - [INFO] Environment - development
+2022-02-04T11:30:11.237Z - [INFO] Starting on port 8080
+2022-02-04T11:30:12.771Z - [INFO] Environment - development
+2022-02-04T11:30:13.228Z - [INFO] Starting on port 8080
+2022-02-04T11:30:14.148Z - [INFO] Environment - development
+2022-02-04T11:30:14.652Z - [INFO] Starting on port 8080
+2022-02-04T11:30:16.167Z - [INFO] Environment - development
+2022-02-04T11:30:16.818Z - [INFO] Starting on port 8080
+2022-02-04T11:30:17.739Z - [INFO] Environment - development
+2022-02-04T11:30:18.222Z - [INFO] Starting on port 8080
+2022-02-04T11:38:39.094Z - [INFO] Environment - development
+2022-02-04T11:38:39.624Z - [INFO] Starting on port 8080
+2022-02-04T11:38:44.301Z - [INFO] Environment - development
+2022-02-04T11:38:44.773Z - [INFO] Starting on port 8080
+2022-02-04T11:38:45.583Z - [INFO] Environment - development
+2022-02-04T11:38:46.050Z - [INFO] Starting on port 8080
+2022-02-04T11:38:48.445Z - [INFO] Environment - development
+2022-02-04T11:38:48.903Z - [INFO] Starting on port 8080
+2022-02-04T11:39:02.210Z - [INFO] Environment - development
+2022-02-04T11:39:02.707Z - [INFO] Starting on port 8080
+2022-02-04T11:39:08.867Z - [INFO] Environment - development
+2022-02-04T11:39:09.367Z - [INFO] Starting on port 8080
+2022-02-04T11:39:11.318Z - [INFO] Environment - development
+2022-02-04T11:39:11.813Z - [INFO] Starting on port 8080
+2022-02-04T11:39:17.539Z - [INFO] Environment - development
+2022-02-04T11:39:18.001Z - [INFO] Starting on port 8080
+2022-02-04T11:39:21.795Z - [INFO] Environment - development
+2022-02-04T11:39:22.279Z - [INFO] Starting on port 8080
+2022-02-04T11:39:35.606Z - [INFO] Environment - development
+2022-02-04T11:39:36.127Z - [INFO] Starting on port 8080
+2022-02-04T11:42:52.280Z - [INFO] Environment - development
+2022-02-04T11:42:52.839Z - [INFO] Starting on port 8080
+2022-02-04T11:42:56.137Z - [INFO] Environment - development
+2022-02-04T11:42:56.613Z - [INFO] Starting on port 8080
+2022-02-04T11:42:59.846Z - [INFO] Environment - development
+2022-02-04T11:43:00.311Z - [INFO] Starting on port 8080
+2022-02-04T11:43:03.172Z - [INFO] Environment - development
+2022-02-04T11:43:03.628Z - [INFO] Starting on port 8080
+2022-02-04T11:45:51.317Z - [INFO] Environment - development
+2022-02-04T11:45:51.769Z - [INFO] Starting on port 8080
+2022-02-04T11:45:52.742Z - [INFO] Environment - development
+2022-02-04T11:45:53.189Z - [INFO] Starting on port 8080
+2022-02-04T11:46:00.112Z - [INFO] Environment - development
+2022-02-04T11:46:00.596Z - [INFO] Starting on port 8080
+2022-02-04T11:46:01.559Z - [INFO] Environment - development
+2022-02-04T11:46:02.015Z - [INFO] Starting on port 8080
+2022-02-04T11:46:03.073Z - [INFO] Environment - development
+2022-02-04T11:46:03.523Z - [INFO] Starting on port 8080
+2022-02-04T11:46:10.727Z - [INFO] Environment - development
+2022-02-04T11:46:11.204Z - [INFO] Starting on port 8080
+2022-02-04T11:46:16.370Z - [INFO] Environment - development
+2022-02-04T11:46:16.857Z - [INFO] Starting on port 8080
+2022-02-04T11:46:35.164Z - [INFO] Environment - development
+2022-02-04T11:46:35.715Z - [INFO] Starting on port 8080
+2022-02-04T11:46:37.735Z - [INFO] Environment - development
+2022-02-04T11:46:38.198Z - [INFO] Starting on port 8080
+2022-02-04T11:46:40.751Z - [INFO] Environment - development
+2022-02-04T11:46:41.247Z - [INFO] Starting on port 8080
+2022-02-04T11:46:44.333Z - [INFO] Environment - development
+2022-02-04T11:46:44.815Z - [INFO] Starting on port 8080
+2022-02-04T11:46:48.835Z - [INFO] Environment - development
+2022-02-04T11:46:49.290Z - [INFO] Starting on port 8080
+2022-02-04T11:47:06.961Z - [INFO] Environment - development
+2022-02-04T11:47:07.494Z - [INFO] Starting on port 8080
+2022-02-04T11:47:12.087Z - [INFO] Environment - development
+2022-02-04T11:47:12.590Z - [INFO] Starting on port 8080
+2022-02-04T11:51:34.683Z - [INFO] Environment - development
+2022-02-04T11:51:35.241Z - [INFO] Starting on port 8080
+2022-02-04T11:51:38.215Z - [INFO] Environment - development
+2022-02-04T11:51:38.876Z - [INFO] Starting on port 8080
+2022-02-04T11:51:45.874Z - [INFO] Environment - development
+2022-02-04T11:51:46.545Z - [INFO] Starting on port 8080
+2022-02-04T11:51:48.357Z - [INFO] Environment - development
+2022-02-04T11:51:48.808Z - [INFO] Starting on port 8080
+2022-02-04T11:51:54.540Z - [INFO] Environment - development
+2022-02-04T11:51:55.002Z - [INFO] Starting on port 8080
+2022-02-04T11:51:56.156Z - [INFO] Environment - development
+2022-02-04T11:51:56.655Z - [INFO] Starting on port 8080
+2022-02-04T11:51:57.415Z - [INFO] Environment - development
+2022-02-04T11:51:57.866Z - [INFO] Starting on port 8080
+2022-02-04T11:52:05.277Z - [INFO] Environment - development
+2022-02-04T11:52:05.759Z - [INFO] Starting on port 8080
+2022-02-04T11:52:10.802Z - [INFO] Environment - development
+2022-02-04T11:52:11.266Z - [INFO] Starting on port 8080
+2022-02-04T11:52:18.370Z - [INFO] Environment - development
+2022-02-04T11:52:18.838Z - [INFO] Starting on port 8080
+2022-02-04T11:52:29.693Z - [INFO] Environment - development
+2022-02-04T11:52:30.242Z - [INFO] Starting on port 8080
+2022-02-04T11:52:44.677Z - [INFO] Environment - development
+2022-02-04T11:52:45.180Z - [INFO] Starting on port 8080
+2022-02-04T11:52:48.842Z - [INFO] Environment - development
+2022-02-04T11:52:49.293Z - [INFO] Starting on port 8080
+2022-02-04T11:52:50.243Z - [INFO] Environment - development
+2022-02-04T11:52:50.708Z - [INFO] Starting on port 8080
+2022-02-04T11:52:58.974Z - [INFO] Environment - development
+2022-02-04T11:52:59.442Z - [INFO] Starting on port 8080
+2022-02-04T11:53:02.938Z - [INFO] Environment - development
+2022-02-04T11:53:03.391Z - [INFO] Starting on port 8080
+2022-02-04T11:53:20.517Z - [INFO] Environment - development
+2022-02-04T11:53:21.019Z - [INFO] Starting on port 8080
+2022-02-04T11:53:39.563Z - [INFO] Environment - development
+2022-02-04T11:53:40.077Z - [INFO] Starting on port 8080
+2022-02-04T11:54:01.422Z - [INFO] Environment - development
+2022-02-04T11:54:02.057Z - [INFO] Starting on port 8080
+2022-02-04T11:54:42.578Z - [INFO] Environment - development
+2022-02-04T11:54:43.107Z - [INFO] Starting on port 8080
+2022-02-04T11:54:45.363Z - [INFO] Environment - development
+2022-02-04T11:54:45.883Z - [INFO] Starting on port 8080
+2022-02-04T11:55:03.044Z - [INFO] Environment - development
+2022-02-04T11:55:03.561Z - [INFO] Starting on port 8080
+2022-02-04T11:55:23.443Z - [INFO] Environment - development
+2022-02-04T11:55:23.931Z - [INFO] Starting on port 8080
+2022-02-04T11:55:31.276Z - [INFO] Environment - development
+2022-02-04T11:55:31.771Z - [INFO] Starting on port 8080
+2022-02-04T11:55:38.151Z - [INFO] Environment - development
+2022-02-04T11:55:38.616Z - [INFO] Starting on port 8080
+2022-02-04T11:55:39.476Z - [INFO] Environment - development
+2022-02-04T11:55:39.942Z - [INFO] Starting on port 8080
+2022-02-04T11:55:45.195Z - [INFO] Environment - development
+2022-02-04T11:55:45.660Z - [INFO] Starting on port 8080
+2022-02-04T11:55:52.676Z - [INFO] Environment - development
+2022-02-04T11:55:53.151Z - [INFO] Starting on port 8080
+2022-02-04T11:55:54.372Z - [INFO] Environment - development
+2022-02-04T11:55:54.818Z - [INFO] Starting on port 8080
+2022-02-04T11:55:57.690Z - [INFO] Environment - development
+2022-02-04T11:55:58.139Z - [INFO] Starting on port 8080
+2022-02-04T11:56:06.548Z - [INFO] Environment - development
+2022-02-04T11:56:07.013Z - [INFO] Starting on port 8080
+2022-02-04T11:56:13.118Z - [INFO] Environment - development
+2022-02-04T11:56:13.609Z - [INFO] Starting on port 8080
+2022-02-04T11:56:17.374Z - [INFO] Environment - development
+2022-02-04T11:56:17.834Z - [INFO] Starting on port 8080
+2022-02-04T11:56:38.744Z - [INFO] Environment - development
+2022-02-04T11:56:39.334Z - [INFO] Starting on port 8080
+2022-02-04T11:56:44.040Z - [INFO] Environment - development
+2022-02-04T11:56:44.508Z - [INFO] Starting on port 8080
+2022-02-04T11:56:48.608Z - [INFO] Environment - development
+2022-02-04T11:56:49.098Z - [INFO] Starting on port 8080
+2022-02-04T11:56:53.214Z - [INFO] Environment - development
+2022-02-04T11:56:53.685Z - [INFO] Starting on port 8080
+2022-02-04T11:56:59.566Z - [INFO] Environment - development
+2022-02-04T11:57:00.070Z - [INFO] Starting on port 8080
+2022-02-04T11:57:03.564Z - [INFO] Environment - development
+2022-02-04T11:57:04.032Z - [INFO] Starting on port 8080
+2022-02-04T11:57:09.717Z - [INFO] Environment - development
+2022-02-04T11:57:10.165Z - [INFO] Starting on port 8080
+2022-02-04T11:57:13.777Z - [INFO] Environment - development
+2022-02-04T11:57:14.233Z - [INFO] Starting on port 8080
+2022-02-04T11:57:22.784Z - [INFO] Environment - development
+2022-02-04T11:57:23.235Z - [INFO] Starting on port 8080
+2022-02-04T11:57:27.130Z - [INFO] Environment - development
+2022-02-04T11:57:27.584Z - [INFO] Starting on port 8080
+2022-02-04T11:57:30.902Z - [INFO] Environment - development
+2022-02-04T11:57:31.365Z - [INFO] Starting on port 8080
+2022-02-04T11:57:32.402Z - [INFO] Environment - development
+2022-02-04T11:57:32.927Z - [INFO] Starting on port 8080
+2022-02-04T11:57:43.405Z - [INFO] Environment - development
+2022-02-04T11:57:43.934Z - [INFO] Starting on port 8080
+2022-02-04T11:57:54.242Z - [INFO] Environment - development
+2022-02-04T11:57:54.766Z - [INFO] Starting on port 8080
+2022-02-04T11:57:57.736Z - [INFO] Environment - development
+2022-02-04T11:57:58.221Z - [INFO] Starting on port 8080
+2022-02-04T11:58:02.189Z - [INFO] Environment - development
+2022-02-04T11:58:02.659Z - [INFO] Starting on port 8080
+2022-02-04T11:59:10.223Z - [INFO] Mohamed Wolf has been deactivated till 2022-02-04T12:59:10.000Z
+2022-02-04T11:59:49.694Z - [INFO] Environment - development
+2022-02-04T11:59:50.213Z - [INFO] Starting on port 8080
+2022-02-04T12:44:30.926Z - [INFO] Environment - test
+2022-02-04T12:44:31.592Z - [INFO] Starting on port 8080
+2022-02-04T12:47:44.512Z - [INFO] Running environment on development
+2022-02-04T12:47:45.041Z - [INFO] Starting on port 8080
+2022-02-04T12:48:00.074Z - [INFO] Running environment
+2022-02-04T12:48:00.586Z - [INFO] Starting on port 8080
+2022-02-04T12:48:03.316Z - [INFO] Running development environment
+2022-02-04T12:48:03.767Z - [INFO] Starting on port 8080
+2022-02-04T13:02:38.581Z - [INFO] Running development environment
+2022-02-04T13:02:39.132Z - [INFO] Starting on port 8080
+2022-02-04T13:02:39.836Z - [INFO] Running development environment
+2022-02-04T13:02:40.298Z - [INFO] Starting on port 8080
+2022-02-04T13:02:47.249Z - [INFO] Running development environment
+2022-02-04T13:02:47.728Z - [INFO] Starting on port 8080
+2022-02-04T13:02:49.367Z - [INFO] Running development environment
+2022-02-04T13:02:49.823Z - [INFO] Starting on port 8080
+2022-02-04T13:05:38.378Z - [INFO] Running development environment
+2022-02-04T13:05:39.067Z - [INFO] Starting on port 8080
+2022-02-04T13:18:41.273Z - [INFO] Running development environment
+2022-02-04T13:18:41.837Z - [INFO] Starting on port 8080
+2022-02-04T13:18:44.994Z - [INFO] Running development environment
+2022-02-04T13:18:45.461Z - [INFO] Starting on port 8080
+2022-02-04T13:20:10.715Z - [INFO] Running development environment
+2022-02-04T13:20:11.281Z - [INFO] Starting on port 8080
+2022-02-04T13:26:18.472Z - [INFO] Running development environment
+2022-02-04T13:26:18.998Z - [INFO] Starting on port 8080
+2022-02-04T13:26:23.846Z - [INFO] Running development environment
+2022-02-04T13:26:24.355Z - [INFO] Starting on port 8080
+2022-02-04T13:26:26.762Z - [INFO] Running development environment
+2022-02-04T13:26:27.219Z - [INFO] Starting on port 8080
+2022-02-04T13:26:30.034Z - [INFO] Running development environment
+2022-02-04T13:26:30.479Z - [INFO] Starting on port 8080
+2022-02-04T13:27:03.341Z - [INFO] Running development environment
+2022-02-04T13:27:03.888Z - [INFO] Starting on port 8080
+2022-02-04T13:27:19.292Z - [INFO] Running development environment
+2022-02-04T13:27:19.785Z - [INFO] Starting on port 8080
+2022-02-04T13:27:55.572Z - [INFO] Running development environment
+2022-02-04T13:27:56.149Z - [INFO] Starting on port 8080
+2022-02-04T13:28:32.782Z - [INFO] Running development environment
+2022-02-04T13:28:33.240Z - [INFO] Starting on port 8080
+2022-02-04T13:44:30.807Z - [INFO] Running development environment
+2022-02-04T13:44:31.353Z - [INFO] Starting on port 8080
+2022-02-04T13:44:33.402Z - [INFO] Running development environment
+2022-02-04T13:44:33.881Z - [INFO] Starting on port 8080
+2022-02-04T13:44:35.058Z - [INFO] Running development environment
+2022-02-04T13:44:35.522Z - [INFO] Starting on port 8080
+2022-02-04T13:44:39.193Z - [INFO] Running development environment
+2022-02-04T13:44:39.717Z - [INFO] Starting on port 8080
+2022-02-04T13:44:42.693Z - [INFO] Running development environment
+2022-02-04T13:44:43.158Z - [INFO] Starting on port 8080
+2022-02-04T13:44:59.098Z - [INFO] Running development environment
+2022-02-04T13:44:59.634Z - [INFO] Starting on port 8080
+2022-02-04T13:45:02.655Z - [INFO] Running development environment
+2022-02-04T13:45:03.335Z - [INFO] Starting on port 8080
+2022-02-04T13:45:04.597Z - [INFO] Running development environment
+2022-02-04T13:45:05.066Z - [INFO] Starting on port 8080
+2022-02-04T13:45:06.133Z - [INFO] Running development environment
+2022-02-04T13:45:06.603Z - [INFO] Starting on port 8080
+2022-02-04T13:45:10.240Z - [INFO] Running development environment
+2022-02-04T13:45:10.696Z - [INFO] Starting on port 8080
+2022-02-04T13:45:14.132Z - [INFO] Running development environment
+2022-02-04T13:45:14.579Z - [INFO] Starting on port 8080
+2022-02-04T13:45:23.692Z - [INFO] Running development environment
+2022-02-04T13:45:24.144Z - [INFO] Starting on port 8080
+2022-02-04T13:47:46.887Z - [INFO] Running development environment
+2022-02-04T13:47:47.394Z - [INFO] Starting on port 8080
+2022-02-04T13:47:50.017Z - [INFO] Running development environment
+2022-02-04T13:47:50.478Z - [INFO] Starting on port 8080
+2022-02-04T13:47:59.758Z - [INFO] Running development environment
+2022-02-04T13:48:00.236Z - [INFO] Starting on port 8080
+2022-02-04T13:50:40.305Z - [INFO] Running development environment
+2022-02-04T13:50:40.857Z - [INFO] Starting on port 8080
+2022-02-04T13:50:43.418Z - [INFO] Running development environment
+2022-02-04T13:50:43.883Z - [INFO] Starting on port 8080
+2022-02-04T13:50:50.102Z - [INFO] Running development environment
+2022-02-04T13:50:50.567Z - [INFO] Starting on port 8080
+2022-02-04T13:50:52.848Z - [INFO] Running development environment
+2022-02-04T13:50:53.328Z - [INFO] Starting on port 8080
+2022-02-04T13:50:56.274Z - [INFO] Running development environment
+2022-02-04T13:50:56.757Z - [INFO] Starting on port 8080
+2022-02-04T13:55:02.730Z - [INFO] Running development environment
+2022-02-04T13:55:03.269Z - [INFO] Starting on port 8080
+2022-02-04T13:59:38.866Z - [INFO] Running development environment
+2022-02-04T13:59:39.458Z - [INFO] Starting on port 8080
+2022-02-04T13:59:45.291Z - [INFO] Running development environment
+2022-02-04T13:59:45.780Z - [INFO] Starting on port 8080
+2022-02-04T13:59:55.952Z - [INFO] Running development environment
+2022-02-04T13:59:56.448Z - [INFO] Starting on port 8080
+2022-02-04T14:00:03.499Z - [INFO] Running development environment
+2022-02-04T14:00:04.002Z - [INFO] Starting on port 8080
+2022-02-04T14:00:05.050Z - [INFO] Running development environment
+2022-02-04T14:00:05.519Z - [INFO] Starting on port 8080
+2022-02-04T14:00:06.555Z - [INFO] Running development environment
+2022-02-04T14:00:07.092Z - [INFO] Starting on port 8080
+2022-02-04T14:00:09.290Z - [INFO] Running development environment
+2022-02-04T14:00:09.743Z - [INFO] Starting on port 8080
+2022-02-04T14:00:17.897Z - [INFO] Running development environment
+2022-02-04T14:00:18.381Z - [INFO] Starting on port 8080
+2022-02-04T14:00:26.006Z - [INFO] Running development environment
+2022-02-04T14:00:26.487Z - [INFO] Starting on port 8080
+2022-02-04T14:00:57.930Z - [INFO] Running development environment
+2022-02-04T14:00:58.466Z - [INFO] Starting on port 8080
+2022-02-04T14:01:03.080Z - [INFO] Running development environment
+2022-02-04T14:01:03.534Z - [INFO] Starting on port 8080
+2022-02-04T14:01:42.062Z - [INFO] Running development environment
+2022-02-04T14:01:42.629Z - [INFO] Starting on port 8080
+2022-02-04T14:01:43.901Z - [INFO] Running development environment
+2022-02-04T14:01:44.358Z - [INFO] Starting on port 8080
+2022-02-04T14:01:46.295Z - [INFO] Running development environment
+2022-02-04T14:01:46.775Z - [INFO] Starting on port 8080
+2022-02-04T14:01:49.172Z - [INFO] Running development environment
+2022-02-04T14:01:49.643Z - [INFO] Starting on port 8080
+2022-02-04T14:01:50.695Z - [INFO] Running development environment
+2022-02-04T14:01:51.177Z - [INFO] Starting on port 8080
+2022-02-04T14:01:52.151Z - [INFO] Running development environment
+2022-02-04T14:01:52.625Z - [INFO] Starting on port 8080
+2022-02-04T14:02:06.900Z - [INFO] Running development environment
+2022-02-04T14:02:07.439Z - [INFO] Starting on port 8080
+2022-02-04T14:03:19.458Z - [INFO] Running development environment
+2022-02-04T14:03:20.000Z - [INFO] Starting on port 8080
+2022-02-04T14:03:22.990Z - [INFO] Running development environment
+2022-02-04T14:03:23.454Z - [INFO] Starting on port 8080
+2022-02-04T14:03:28.998Z - [INFO] Running development environment
+2022-02-04T14:03:29.465Z - [INFO] Starting on port 8080
+2022-02-04T14:03:33.145Z - [INFO] Running development environment
+2022-02-04T14:03:33.599Z - [INFO] Starting on port 8080
+2022-02-04T14:03:35.315Z - [INFO] Running development environment
+2022-02-04T14:03:35.776Z - [INFO] Starting on port 8080
+2022-02-04T14:03:36.892Z - [INFO] Running development environment
+2022-02-04T14:03:37.402Z - [INFO] Starting on port 8080
+2022-02-04T14:03:38.992Z - [INFO] Running development environment
+2022-02-04T14:03:39.457Z - [INFO] Starting on port 8080
+2022-02-04T14:03:42.336Z - [INFO] Running development environment
+2022-02-04T14:03:42.825Z - [INFO] Starting on port 8080
+2022-02-04T14:03:46.171Z - [INFO] Running development environment
+2022-02-04T14:03:46.654Z - [INFO] Starting on port 8080
+2022-02-04T14:03:50.480Z - [INFO] Running development environment
+2022-02-04T14:03:51.478Z - [INFO] Starting on port 8080
+2022-02-04T14:04:33.497Z - [INFO] Running development environment
+2022-02-04T14:04:33.992Z - [INFO] Starting on port 8080
