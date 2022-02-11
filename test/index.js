@@ -49,6 +49,7 @@ describe('', () => {
         });
     });
   });
+
   // AUTHENTICATION
   describe('Admin Registration', () => {
     it('should register a user with the role of an admin', (done) => {
@@ -155,6 +156,7 @@ describe('', () => {
         });
     });
   });
+
   // USER ENDPOINTS
   describe('Get Users', () => {
     it('should return all users', (done) => {
@@ -244,6 +246,7 @@ describe('', () => {
         });
     });
   });
+
   // PURCHASE ENDPOINTS
   describe('Create a Purchase Order', () => {
     it('should create a purchase order', (done) => {

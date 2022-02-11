@@ -11,7 +11,7 @@ const {
   IMS_API_ACCESS_SECRET: ACCESS_TOKEN,
   IMS_API_REFRESH_SECRET: REFRESH_TOKEN,
 } = process.env;
-logger.info(`Environment - ${NODE_ENV}`);
+logger.info(`Running ${NODE_ENV} environment`);
 const currentEnv = {
   development,
   test,

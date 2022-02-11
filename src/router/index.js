@@ -17,6 +17,7 @@ import {
 } from '../middleware/checkProduct';
 import updateStockPriceAndQuantity from '../middleware/productCheck';
 import validateInput from '../middleware/validation';
+import { cronJobSchedule } from '../services/cronSchedule';
 import {
   createAdminSchema,
   createPurchaseSchema, createUserSchema, loginUserSchema, refreshTokenSchema,
@@ -33,7 +34,7 @@ router.get('/api/v1/users', verifyToken('admin'), checkIfUserIsAdmin, cache, get
 router.get('/api/v1/user/:id', verifyToken('admin'), checkIfUserIsAdmin, getAUserById);
 router.delete('/api/v1/users/delete/:id', verifyToken('admin'), checkIfUserIsAdmin, deleteAUserById);
 router.put('/api/v1/users/update/:id', verifyToken('admin'), checkIfUserIsAdmin, updateAUserById);
-router.put('/api/v1/user/schedule/:id', verifyToken('admin'), checkIfUserIsAdmin, updateSchedule);
+router.put('/api/v1/user/schedule/:id', verifyToken('admin'), checkIfUserIsAdmin, updateSchedule, cronJobSchedule);
 // PURCHASE ENDPOINTS
 router.put('/api/v1/purchase/:id/:status', verifyToken('user'), checkIfProductExistsById, checkApprovalStatus, updateApprovalStatus);
 router.post('/api/v1/purchase/create', validateInput(createPurchaseSchema, 'body'), verifyToken('user'), checkIfProductExistsByName, updateStockPriceAndQuantity, createPurchase);
